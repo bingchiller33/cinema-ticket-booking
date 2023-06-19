@@ -1,0 +1,44 @@
+.card {
+    border: 1px solid white;
+    background: black;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.card-top h1 {
+    font-size: 1rem;
+    margin: 10px 20px;
+}
+
+.card-bottom {
+    margin: 10px 20px;
+}
+
+.slick-slide>div {
+    margin: 0 10px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+.card-top>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-last-line {
+    position: relative;
+}
+
+.card-last-line::before {
+    content: '';
+    background: rgb(255, 61, 61);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    height: 2px;
+}

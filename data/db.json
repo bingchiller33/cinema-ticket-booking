@@ -45,6 +45,7 @@
   "movies": [
     {
       "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
+      "movieImage": "https://cdn.galaxycine.vn/media/2023/2/17/antman-3-2_1676601186349.jpg",
       "movieId": 1,
       "movieName": "Ant-Man and the Wasp: Quantumania",
       "actor": "Robert Downey Jr.",
@@ -53,6 +54,7 @@
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174728im_/https://cdn.galaxycine.vn/media/2023/5/18/2048x682_1684396421946.jpg",
+      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/18/300x450_1684396285003.jpg",
       "movieId": 2,
       "movieName": "Spider-Man: Across the Spider-Verse ",
       "actor": "Spider Man",
@@ -61,7 +63,35 @@
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
+      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/15/doraemon-utopia-2_1684121814838.jpg",
       "movieId": 3,
+      "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
+      "actor": "Nobita",
+      "director": "Doyama Takumi",
+      "releaseDate": "2023-05-26"
+    },
+    {
+      "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
+      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/19/300x450_1684480233307.jpg",
+      "movieId": 4,
+      "movieName": "TRANSFORMERS: RISE OF THE BEAST",
+      "actor": "Ron Perlman",
+      "director": "Steven Caple Jr.",
+      "releaseDate": "2023-06-09"
+    },
+    {
+      "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/12/2048x682_1686554041241.jpg",
+      "movieImage": "https://cdn.galaxycine.vn/media/2023/6/12/300x450_1686553793493.jpg",
+      "movieId": 5,
+      "movieName": "ELEMENTAL",
+      "actor": "Mamoudou Athie",
+      "director": "Peter Sohn",
+      "releaseDate": "2023-06-23"
+    },
+    {
+      "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
+      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/18/300x450_1684396285003.jpg",
+      "movieId": 6,
       "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
       "actor": "Nobita",
       "director": "Doyama Takumi",

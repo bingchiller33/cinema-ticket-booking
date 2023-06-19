@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Carousel, Col, Row } from "react-bootstrap";
+import { Card, Carousel, Col, Row } from "react-bootstrap";
 import "../../styles/carousel.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const CarouselComponent = () => {
   const [movies, setMovies] = useState([]);
@@ -11,7 +12,11 @@ const CarouselComponent = () => {
       .get("http://localhost:9999/movies")
       .then((response) => {
         const moviesData = response.data;
-        setMovies(moviesData);
+        const sortedMovies = moviesData.sort(
+          (a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)
+        );
+        const newestMovies = sortedMovies.slice(0, 3);
+        setMovies(newestMovies);
       })
       .catch((error) => {
         console.error("Error fetching movies", error);
@@ -19,43 +24,55 @@ const CarouselComponent = () => {
   }, []);
 
   return (
-    <div className="carousel-container">
-      <Carousel interval={3000} pause="hover" fade>
-        {movies.map((movie) => (
-          <Carousel.Item style={{ height: "550px" }} key={movie.movieId}>
-            <img
-              className="carousel-image"
-              src={movie.movieBanner}
-              alt="First slide"
+    <Carousel
+      interval={3000}
+      pause="hover"
+      className="card-slider"
+      controls={false}
+      indicators={false}
+    >
+      {movies.map((card) => (
+        <Carousel.Item key={card.movieId}>
+          <Card>
+            <Card.Img
+              variant="top"
+              src={card.movieBanner}
+              alt="Card Image"
+              style={{ height: "600px" }}
             />
-            <div className="carousel-box">
+            <Card.Body>
               <Row>
                 <Col xs={8}>
                   <Row>
                     <Col xs={4}>
-                      <h2 className="box-title">Title</h2>
-                      <h1 className="box-info">{movie.movieName}</h1>
+                      <Card.Title>Title</Card.Title>
+                      <Card.Text>{card.movieName}</Card.Text>
                     </Col>
                     <Col xs={2}>
-                      <h2 className="box-title">Release</h2>
-                      <h1 className="box-info">{movie.releaseDate}</h1>
+                      <Card.Title>Release Date</Card.Title>
+                      <Card.Text>{card.releaseDate}</Card.Text>
                     </Col>
                     <Col xs={2}>
-                      <h2 className="box-title">Director</h2>
-                      <h1 className="box-info">{movie.director}</h1>
+                      <Card.Title>Director</Card.Title>
+                      <Card.Text>{card.director}</Card.Text>
                     </Col>
                   </Row>
                 </Col>
                 <Col xs={4}>
-                  <a className="box-link">Book Now</a>
+                  <Row>
+                    <Col xs={12}>
+                      <Card.Text>
+                        <Link to="/movies">Click here for more details!</Link>
+                      </Card.Text>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
-              {/* Additional content or components */}
-            </div>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-    </div>
+            </Card.Body>
+          </Card>
+        </Carousel.Item>
+      ))}
+    </Carousel>
   );
 };
 
