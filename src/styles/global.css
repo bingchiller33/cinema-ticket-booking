@@ -1,0 +1,168 @@
+/* variables.css */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+}
+
+/* global.css */
+
+/* Reset default browser styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Apply a box-sizing border-box to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default button styles */
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    color: inherit;
+}
+
+/* Set default font and font size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Apply global link styles */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* Apply global heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Apply global button styles */
+button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+}
+
+/* Apply global input styles */
+input {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+/* Apply global container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}

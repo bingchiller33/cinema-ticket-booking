@@ -1,0 +1,102 @@
+{
+  "customers": [
+    {
+      "customerId": 1,
+      "username": "s",
+      "email": "luong6866@gmail.com",
+      "phoneNumber": "0752970143",
+      "password": "s",
+      "passwordConfirm": "s"
+    }
+  ],
+  "bookings": [
+    {
+      "bookingDate": "2023-06-18",
+      "ticketNumber": "B123456",
+      "customerId": 1
+    }
+  ],
+  "tickets": [
+    {
+      "ticketId": 1,
+      "adminId": 1,
+      "ticketNumber": "T123456",
+      "hallId": 1,
+      "price": 10.99,
+      "seatNumber": "A1",
+      "showDate": "2023-06-20",
+      "showId": 1
+    }
+  ],
+  "admins": [
+    {
+      "adminId": 1,
+      "password": "admin123"
+    }
+  ],
+  "shows": [
+    {
+      "showId": 1,
+      "startTime": "18:00",
+      "endTime": "20:30",
+      "language": "English"
+    }
+  ],
+  "movies": [
+    {
+      "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
+      "movieId": 1,
+      "movieName": "Ant-Man and the Wasp: Quantumania",
+      "actor": "Robert Downey Jr.",
+      "director": "Joss Whedon",
+      "releaseDate": "2012-04-11"
+    },
+    {
+      "movieBanner": "https://web.archive.org/web/20230618174728im_/https://cdn.galaxycine.vn/media/2023/5/18/2048x682_1684396421946.jpg",
+      "movieId": 2,
+      "movieName": "Spider-Man: Across the Spider-Verse ",
+      "actor": "Spider Man",
+      "director": "Joaquim Dos Santos",
+      "releaseDate": "2023-06-01"
+    },
+    {
+      "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
+      "movieId": 3,
+      "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
+      "actor": "Nobita",
+      "director": "Doyama Takumi",
+      "releaseDate": "2023-05-26"
+    }
+  ],
+  "discounts": [
+    {
+      "offerId": 1,
+      "price": 5.99,
+      "movieName": "The Avengers"
+    }
+  ],
+  "theatres": [
+    {
+      "theatreId": 1,
+      "theatreName": "Cinema 1",
+      "location": "City Center"
+    }
+  ],
+  "halls": [
+    {
+      "hallId": 1,
+      "theatreId": 1,
+      "hallName": "Hall 1",
+      "capacity": 100
+    }
+  ],
+  "seats": [
+    {
+      "seatId": 1,
+      "hallId": 1,
+      "seatNumber": "A1",
+      "row": "A",
+      "column": 1
+    }
+  ]
+}
