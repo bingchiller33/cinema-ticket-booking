@@ -33,7 +33,7 @@ const CarouselComponent = () => {
     >
       {movies.map((card) => (
         <Carousel.Item key={card.movieId}>
-          <Card>
+          <Card className="carousel-card">
             <Card.Img
               variant="top"
               src={card.movieBanner}

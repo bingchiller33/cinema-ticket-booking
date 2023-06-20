@@ -2,18 +2,19 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../../styles/card.css";
 import Slider from "react-slick";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 const CardComponent = () => {
   const [movies, setMovies] = useState([]);
 
   const settings = {
-    dots: true,
-    infinite: false,
+    dots: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     initialSlide: 0,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -56,17 +57,13 @@ const CardComponent = () => {
 
   return (
     <Container>
-        <h1 style={{margin: "30px 0px 30px"}}>Upcoming Premieres</h1>
+      <h1 style={{ margin: "30px 0px 30px" }}>Upcoming Premieres</h1>
       <Slider {...settings}>
         {movies.map((item) => (
-          <div className="card">
+          <div className="card-card">
             <div className="card-top">
               <img src={item.movieImage} alt={item.movieName} />
               <h1>{item.movieName}</h1>
-            </div>
-            <div className="card-bottom">
-              <h3>{item.director}</h3>
-              <span className="card-last-line">{item.releaseDate}</span>
             </div>
           </div>
         ))}
