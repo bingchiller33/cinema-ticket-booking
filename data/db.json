@@ -1,12 +1,28 @@
 {
   "customers": [
     {
-      "customerId": 1,
-      "username": "s",
-      "email": "luong6866@gmail.com",
-      "phoneNumber": "0752970143",
-      "password": "s",
-      "passwordConfirm": "s"
+      "username": "jgsec3ihkt",
+      "email": "luosng6866@gmail.com",
+      "phoneNumber": "0275297014",
+      "password": "a",
+      "passwordConfirm": "a",
+      "id": 1
+    },
+    {
+      "username": "admin",
+      "email": "user@gmail.com",
+      "phoneNumber": "0375297014",
+      "password": "Ac123456",
+      "passwordConfirm": "Ac123456",
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "email": "adsmin@gmail.com",
+      "phoneNumber": "0375297013",
+      "password": "Ac12345678",
+      "passwordConfirm": "Ac12345678",
+      "id": 3
     }
   ],
   "bookings": [
@@ -50,6 +66,8 @@
       "movieName": "Ant-Man and the Wasp: Quantumania",
       "actor": "Robert Downey Jr.",
       "director": "Joss Whedon",
+      "duration": 105,
+      "category": "Anime, Action, Adventure",
       "releaseDate": "2012-04-11"
     },
     {
@@ -59,6 +77,8 @@
       "movieName": "Spider-Man: Across the Spider-Verse ",
       "actor": "Spider Man",
       "director": "Joaquim Dos Santos",
+      "duration": 105,
+      "category": "Anime, Family, Comedy",
       "releaseDate": "2023-06-01"
     },
     {
@@ -68,6 +88,8 @@
       "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
       "actor": "Nobita",
       "director": "Doyama Takumi",
+      "duration": 105,
+      "category": "Anime, Family, Comedy",
       "releaseDate": "2023-05-26"
     },
     {
@@ -77,6 +99,8 @@
       "movieName": "TRANSFORMERS: RISE OF THE BEAST",
       "actor": "Ron Perlman",
       "director": "Steven Caple Jr.",
+      "duration": 105,
+      "category": "Anime, Emotional, Comedy",
       "releaseDate": "2023-06-09"
     },
     {
@@ -86,6 +110,8 @@
       "movieName": "ELEMENTAL",
       "actor": "Mamoudou Athie",
       "director": "Peter Sohn",
+      "duration": 105,
+      "category": "Anime, Adventure, Emotional",
       "releaseDate": "2023-06-23"
     },
     {
@@ -95,7 +121,20 @@
       "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
       "actor": "Nobita",
       "director": "Doyama Takumi",
+      "duration": 105,
+      "category": "Anime, Family, Adventure",
       "releaseDate": "2023-05-26"
+    },
+    {
+      "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
+      "movieImage": "https://www.cgv.vn/media/catalog/product/cache/1/thumbnail/190x260/2e2b8cd282892c71872b9e67d2cb5039/p/o/poster-kraken.jpg",
+      "movieId": 7,
+      "movieName": "RUBY THỦY QUÁI TUỔI TEEN",
+      "actor": "Nobita",
+      "director": "Doyama Takumi",
+      "duration": 105,
+      "category": "Anime, Family, Adventure",
+      "releaseDate": "2023-09-26"
     }
   ],
   "discounts": [

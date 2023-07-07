@@ -6,7 +6,6 @@ import { Container, Row } from "react-bootstrap";
 
 const CardComponent = () => {
   const [movies, setMovies] = useState([]);
-
   const settings = {
     dots: false,
     infinite: true,
