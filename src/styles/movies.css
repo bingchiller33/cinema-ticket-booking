@@ -1,0 +1,27 @@
+.card-body_movie {
+    padding: 10px 0 95px !important; 
+    max-height: none;
+    height: 226px;
+    min-height: 81px; 
+}
+.card_movie_img {
+    height: 260px;
+    border: 6px solid;
+}
+.card-body_title {
+    font-weight: bold !important;
+}
+.card-text_component {
+    margin: 0;
+}
+.card-text_component > span {
+    font-weight: bold;
+}
+.card_container {
+    border: none !important;
+}
+.search_movie {
+    margin: 20px 0 !important;
+    padding: 20px 0;
+    border-bottom: 4px solid #000;
+}
