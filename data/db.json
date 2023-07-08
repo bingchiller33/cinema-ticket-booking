@@ -60,15 +60,15 @@
   ],
   "movies": [
     {
-      "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/2/17/antman-3-2_1676601186349.jpg",
+      "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--3_1688111575146.jpg",
+      "movieImage": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--1_1688111521392.jpg",
       "movieId": 1,
-      "movieName": "Ant-Man and the Wasp: Quantumania",
-      "actor": "Robert Downey Jr.",
-      "director": "Joss Whedon",
-      "duration": 105,
-      "category": "Anime, Action, Adventure",
-      "releaseDate": "2012-04-11"
+      "movieName": "INSIDIOUS: THE RED DOOR",
+      "actor": "Rose Byrne",
+      "director": "Patrick Wilson",
+      "duration": 107,
+      "category": "Horror, Action, Adventure",
+      "releaseDate": "2023-07-12"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174728im_/https://cdn.galaxycine.vn/media/2023/5/18/2048x682_1684396421946.jpg",
@@ -116,19 +116,8 @@
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/18/300x450_1684396285003.jpg",
-      "movieId": 6,
-      "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
-      "actor": "Nobita",
-      "director": "Doyama Takumi",
-      "duration": 105,
-      "category": "Anime, Family, Adventure",
-      "releaseDate": "2023-05-26"
-    },
-    {
-      "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
       "movieImage": "https://www.cgv.vn/media/catalog/product/cache/1/thumbnail/190x260/2e2b8cd282892c71872b9e67d2cb5039/p/o/poster-kraken.jpg",
-      "movieId": 7,
+      "movieId": 6,
       "movieName": "RUBY THỦY QUÁI TUỔI TEEN",
       "actor": "Nobita",
       "director": "Doyama Takumi",

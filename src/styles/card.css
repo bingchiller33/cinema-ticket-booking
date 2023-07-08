@@ -3,8 +3,6 @@
     background: rgb(255, 255, 255);
     border-radius: 8px;
     overflow: hidden;
-    max-width: 300px;
-    max-height: 400px;
 }
 
 .card-top h1 {
@@ -13,6 +11,7 @@
 }
 
 .card-bottom {
+    
     margin: 10px 20px;
 }
 
@@ -42,4 +41,19 @@
     left: 0;
     right: 0;
     height: 2px;
+}
+
+.slick-dots li button:before {
+    color: rgb(179,178,178) !important;
+    font-size: 20px !important;
+    margin-top: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: black !important;
+}
+
+.slick-prev,
+.slick-next {
+  color: red !important;
 }

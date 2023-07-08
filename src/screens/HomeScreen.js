@@ -11,7 +11,7 @@ const HomeScreen = () => {
   return (
     <DefaultTemplate>
       <CarouselComponent />
-      <CardComponent /> 
+      <CardComponent heading={"Currently Premiere"}/> 
     </DefaultTemplate>
   );
 };
