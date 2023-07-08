@@ -1,12 +1,12 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import "../../styles/Header.css";
 const Header = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        {/* Logo */}
+
         <Navbar.Brand as={Link} to="/" className="logo-img">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Square%2C_Inc_-_Square_Logo.jpg/1200px-Square%2C_Inc_-_Square_Logo.jpg"
@@ -40,8 +40,17 @@ const Header = () => {
             >
               Poster
             </NavLink>
+            {/* Logo */}
             {/* Add more links as needed */}
           </Nav>
+        </Navbar.Collapse>
+        <Navbar.Collapse style={{ justifyContent: 'right' }}>
+          <NavLink
+            to="/login"
+            className={({ isActive }) => (isActive ? "active-link" : "link")}
+          >
+            Login
+          </NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>

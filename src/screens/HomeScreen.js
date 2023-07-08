@@ -1,13 +1,18 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { toast } from 'react-toastify';
 import CarouselComponent from "../components/common/CarouselComponent";
 import CardComponent from "../components/common/CardComponent";
-const HomeScreen = () => {
+import DefaultTemplate from "../templates/DefaultTemplate";
+const HomeScreen = () => { 
+  if (localStorage.getItem('login_success')) {
+    toast.success('you have successfully logged in, please experience our service')
+    localStorage.removeItem('login_success')
+  }
   return (
-    <React.Fragment>
+    <DefaultTemplate>
       <CarouselComponent />
-      <CardComponent />
-    </React.Fragment>
+      <CardComponent /> 
+    </DefaultTemplate>
   );
 };
 
