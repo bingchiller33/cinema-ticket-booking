@@ -4,7 +4,7 @@ import "../../styles/card.css";
 import Slider from "react-slick";
 import { Container, Row } from "react-bootstrap";
 
-const CardComponent = () => {
+const CardComponent = ({ apiUrl, heading }) => {
   const [movies, setMovies] = useState([]);
 
   const settings = {
@@ -57,7 +57,7 @@ const CardComponent = () => {
 
   return (
     <Container>
-      <h1 style={{ margin: "30px 0px 30px" }}>Upcoming Premieres</h1>
+      <h1 style={{ margin: "30px 0px 30px" }}>{heading}</h1>
       <Slider {...settings}>
         {movies.map((item) => (
           <div className="card-card">
