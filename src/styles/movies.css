@@ -25,3 +25,20 @@
     padding: 20px 0;
     border-bottom: 4px solid #000;
 }
+.movie_title {
+    text-decoration: none;
+    color: #000;
+}
+.movie_title:hover {
+    opacity: 0.8;
+}
+.movie_detail {
+    padding-left: 5px;
+}
+.movie_like {
+    padding-right: 5px;
+}
+.movie_detail_link {
+    text-decoration: none;
+    color: #fff;
+}

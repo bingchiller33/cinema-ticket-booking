@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 import HomeScreen from "./screens/HomeScreen";
 import MoviesScreen from "./screens/MoviesScreen";
-import BookingScreen from "./screens/BookingScreen"; 
+import BookingScreen from "./screens/DetailScreen"; 
+import DetailScreen from "./screens/DetailScreen"
 import 'react-toastify/dist/ReactToastify.css';
 import Login from "./screens/Login";
 import Register from "./screens/Register";
@@ -28,9 +29,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/movies" element={<MoviesScreen />} />
-          <Route path="/booking" element={<BookingScreen />} />
+          <Route path="/booking/:mid" element={<BookingScreen />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/detail/:mid" element={<DetailScreen />} />
         </Routes>
     </BrowserRouter>
   );

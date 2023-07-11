@@ -5,7 +5,7 @@ import CardComponent from "../components/common/CardComponent";
 import DefaultTemplate from "../templates/DefaultTemplate";
 const HomeScreen = () => { 
   if (localStorage.getItem('login_success')) {
-    toast.success('you have successfully logged in, please experience our service')
+    toast.success('You have successfully logged in, please experience our service')
     localStorage.removeItem('login_success')
   }
   return (
