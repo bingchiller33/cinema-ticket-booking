@@ -5,6 +5,7 @@ import BookingScreen from "./screens/BookingScreen";
 import 'react-toastify/dist/ReactToastify.css';
 import Login from "./screens/Login";
 import Register from "./screens/Register";
+import ManageShowtimes from "./screens/ManageShowtimes";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/booking" element={<BookingScreen />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/showtimes" element={<ManageShowtimes />} />
         </Routes>
     </BrowserRouter>
   );
