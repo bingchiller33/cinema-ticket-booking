@@ -3,17 +3,20 @@ import React, { useEffect, useState } from "react";
 import "../../styles/card.css";
 import Slider from "react-slick";
 import { Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const CardComponent = () => {
+const CardComponent = ({ apiUrl, heading }) => {
   const [movies, setMovies] = useState([]);
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: true,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -55,14 +58,16 @@ const CardComponent = () => {
   }, []);
 
   return (
-    <Container>
-      <h1 style={{ margin: "30px 0px 30px" }}>Upcoming Premieres</h1>
+    <Container style={{marginBottom: "50px"}}>
+      <h1 style={{ margin: "30px 0px 30px" }}>{heading}</h1>
       <Slider {...settings}>
         {movies.map((item) => (
-          <div className="card-card">
+          <div key={item.movieId} className="card-card">
             <div className="card-top">
               <img src={item.movieImage} alt={item.movieName} />
-              <h1>{item.movieName}</h1>
+              <Link to="/movies">
+                <h1>{item.movieName}</h1>
+              </Link>
             </div>
           </div>
         ))}

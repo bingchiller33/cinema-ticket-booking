@@ -35,3 +35,16 @@
     color: #000000;
     
 }
+
+.carousel-indicators {
+    margin-bottom: 6rem !important;
+}
+
+
+.carousel-indicators [data-bs-target] {
+    background-color:rgb(255, 0, 191) !important;
+}
+
+.card-body {
+    height: 100%;
+}

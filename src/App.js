@@ -6,9 +6,29 @@ import DetailScreen from "./screens/DetailScreen"
 import 'react-toastify/dist/ReactToastify.css';
 import Login from "./screens/Login";
 import Register from "./screens/Register";
+import BookingScreen from "./screens/BookingScreen"; 
+import 'react-toastify/dist/ReactToastify.css';
+import Login from "./screens/Login";
+import Register from "./screens/Register";
+import ManageShowtimes from "./screens/ManageShowtimes";
 
 
 function App() {
+  const loginTime = localStorage.getItem('loginTime');
+
+  if (loginTime) {
+    const currentTime = new Date().getTime();
+    const elapsedTime = currentTime - loginTime;
+    const sessionDuration = 60 * 60 * 1000; // 1 giờ
+    if (elapsedTime > sessionDuration) {
+      localStorage.removeItem('customer');
+    } else {
+      localStorage.setItem('loginTime', currentTime);
+    }
+  } else {
+
+    localStorage.removeItem('customer');
+  }
   const loginTime = localStorage.getItem('loginTime');
 
   if (loginTime) {
@@ -33,6 +53,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/detail/:mid" element={<DetailScreen />} />
+          <Route path="/booking" element={<BookingScreen />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/showtimes" element={<ManageShowtimes />} />
         </Routes>
     </BrowserRouter>
   );

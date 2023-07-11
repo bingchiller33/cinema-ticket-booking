@@ -7,9 +7,7 @@ const DefaultTemplate = ({ children }) => {
   return (
     <div>
       <Header /> 
-      <Container>
       <main>{children}</main> 
-      </Container>
       <Footer />
     </div>
   );
