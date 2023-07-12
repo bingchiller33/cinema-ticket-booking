@@ -23,17 +23,3 @@ export default function FormGroup({ md, inputRef, type = 'text', label, placehol
     )
 }
 
-{/* <Form.Group className='form-group'>
-    <Form.Label>Username <span style={{ color: 'red' }}>*</span></Form.Label>
-    <Form.Control
-        ref={inputUserName}
-        onBlur={(e) => handleOnBlur(e)}
-        onFocus={(e) => handleOnFocus(e)}
-        value={formValue.userName}
-        onChange={(e) => handleOnChange(e)}
-        className='form-control'
-        type='text'
-        id='userName'
-        name={'userName'} placeholder={'Enter user name'} />
-    <span className='form-message'></span>
-</Form.Group>  */}

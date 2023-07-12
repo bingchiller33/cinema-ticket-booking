@@ -88,7 +88,7 @@ const CardComponent = ({ apiUrl, heading }) => {
   }, []);
 
   return (
-    <Container style={{marginBottom: "50px"}}>
+    <Container style={{ marginBottom: "50px" }}>
       <h1 style={{ margin: "30px 0px 30px" }}>{heading}</h1>
       <Slider {...settings}>
         {movies.map((item) => (
