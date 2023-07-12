@@ -50,12 +50,78 @@
       "password": "admin123"
     }
   ],
-  "shows": [
+  "showtimes": [
     {
-      "showId": 1,
-      "startTime": "18:00",
-      "endTime": "20:30",
-      "language": "English"
+      "id": 1,
+      "movieId": 1,
+      "date": "2023-05-20",
+      "times": "14:00"
+    },
+    {
+      "id": 2,
+      "movieId": 1,
+      "date": "2023-05-20",
+      "times": "15:00"
+    },
+    {
+      "id": 3,
+      "movieId": 1,
+      "date": "2023-05-21",
+      "times": "14:00"
+    },
+    {
+      "id": 4,
+      "movieId": 2,
+      "date": "2023-05-20",
+      "times": "14:00"
+    },
+    {
+      "id": 5,
+      "movieId": 2,
+      "date": "2023-05-20",
+      "times": "15:00"
+    },
+    {
+      "id": 6,
+      "movieId": 2,
+      "date": "2023-05-21",
+      "times": "14:00"
+    },
+    {
+      "id": 7,
+      "movieId": 3,
+      "date": "2023-05-20",
+      "times": "14:00"
+    },
+    {
+      "id": 8,
+      "movieId": 3,
+      "date": "2023-05-20",
+      "times": "15:00"
+    },
+    {
+      "id": 9,
+      "movieId": 3,
+      "date": "2023-05-21",
+      "times": "14:00"
+    },
+    {
+      "id": 10,
+      "movieId": 4,
+      "date": "2023-05-20",
+      "times": "14:00"
+    },
+    {
+      "id": 11,
+      "movieId": 4,
+      "date": "2023-05-20",
+      "times": "15:00"
+    },
+    {
+      "id": 12,
+      "movieId": 4,
+      "date": "2023-05-21",
+      "times": "14:00"
     }
   ],
   "movies": [
@@ -68,68 +134,7 @@
       "director": "Patrick Wilson",
       "duration": 107,
       "category": "Horror, Action, Adventure",
-      "releaseDate": "2023-07-12",
-      "showtimes": [
-        {
-          "date": "2023-05-20",
-          "times": [
-            "20:30"
-          ]
-        },
-        {
-          "date": "2023-05-21",
-          "times": [
-            "19:32"
-          ]
-        },
-        {
-          "date": "2023-06-25",
-          "times": [
-            "16:46"
-          ]
-        },
-        {
-          "date": "2023-06-28",
-          "times": [
-            "16:50"
-          ]
-        },
-        {
-          "date": "2023-06-30",
-          "times": [
-            "16:53"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "21:06"
-          ]
-        },
-        {
-          "date": "2023-06-27",
-          "times": [
-            "16:17",
-            "16:21",
-            "16:23",
-            "16:19",
-            "16:26"
-          ]
-        },
-        {
-          "date": "2023-05-31",
-          "times": [
-            "16:37",
-            "16:37"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "14:00"
-          ]
-        }
-      ]
+      "releaseDate": "2023-07-12"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174728im_/https://cdn.galaxycine.vn/media/2023/5/18/2048x682_1684396421946.jpg",
@@ -140,66 +145,7 @@
       "director": "Joaquim Dos Santos",
       "duration": 105,
       "category": "Anime, Family, Comedy",
-      "releaseDate": "2023-06-01",
-      "showtimes": [
-        {
-          "date": "2023-05-20",
-          "times": []
-        },
-        {
-          "date": "2023-05-21",
-          "times": [
-            "19:32"
-          ]
-        },
-        {
-          "date": "2023-06-25",
-          "times": [
-            "16:46"
-          ]
-        },
-        {
-          "date": "2023-06-28",
-          "times": [
-            "16:50"
-          ]
-        },
-        {
-          "date": "2023-06-30",
-          "times": [
-            "16:53"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "21:06"
-          ]
-        },
-        {
-          "date": "2023-06-27",
-          "times": [
-            "16:17",
-            "16:21",
-            "16:23",
-            "16:19",
-            "16:26"
-          ]
-        },
-        {
-          "date": "2023-05-31",
-          "times": [
-            "16:37",
-            "16:37"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "14:00"
-          ]
-        }
-      ]
+      "releaseDate": "2023-06-01"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
@@ -210,68 +156,7 @@
       "director": "Doyama Takumi",
       "duration": 105,
       "category": "Anime, Family, Comedy",
-      "releaseDate": "2023-05-26",
-      "showtimes": [
-        {
-          "date": "2023-05-20",
-          "times": [
-            "20:30"
-          ]
-        },
-        {
-          "date": "2023-05-21",
-          "times": [
-            "19:32"
-          ]
-        },
-        {
-          "date": "2023-06-25",
-          "times": [
-            "16:46"
-          ]
-        },
-        {
-          "date": "2023-06-28",
-          "times": [
-            "16:50"
-          ]
-        },
-        {
-          "date": "2023-06-30",
-          "times": [
-            "16:53"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "21:06"
-          ]
-        },
-        {
-          "date": "2023-06-27",
-          "times": [
-            "16:17",
-            "16:21",
-            "16:23",
-            "16:19",
-            "16:26"
-          ]
-        },
-        {
-          "date": "2023-05-31",
-          "times": [
-            "16:37",
-            "16:37"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "14:00"
-          ]
-        }
-      ]
+      "releaseDate": "2023-05-26"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
@@ -282,68 +167,7 @@
       "director": "Steven Caple Jr.",
       "duration": 105,
       "category": "Anime, Emotional, Comedy",
-      "releaseDate": "2023-06-09",
-      "showtimes": [
-        {
-          "date": "2023-05-20",
-          "times": [
-            "20:30"
-          ]
-        },
-        {
-          "date": "2023-05-21",
-          "times": [
-            "19:32"
-          ]
-        },
-        {
-          "date": "2023-06-25",
-          "times": [
-            "16:46"
-          ]
-        },
-        {
-          "date": "2023-06-28",
-          "times": [
-            "16:50"
-          ]
-        },
-        {
-          "date": "2023-06-30",
-          "times": [
-            "16:53"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "21:06"
-          ]
-        },
-        {
-          "date": "2023-06-27",
-          "times": [
-            "16:17",
-            "16:21",
-            "16:23",
-            "16:19",
-            "16:26"
-          ]
-        },
-        {
-          "date": "2023-05-31",
-          "times": [
-            "16:37",
-            "16:37"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "14:00"
-          ]
-        }
-      ]
+      "releaseDate": "2023-06-09"
     },
     {
       "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/12/2048x682_1686554041241.jpg",
@@ -354,68 +178,7 @@
       "director": "Peter Sohn",
       "duration": 105,
       "category": "Anime, Adventure, Emotional",
-      "releaseDate": "2023-06-23",
-      "showtimes": [
-        {
-          "date": "2023-05-20",
-          "times": [
-            "20:30"
-          ]
-        },
-        {
-          "date": "2023-05-21",
-          "times": [
-            "19:32"
-          ]
-        },
-        {
-          "date": "2023-06-25",
-          "times": [
-            "16:46"
-          ]
-        },
-        {
-          "date": "2023-06-28",
-          "times": [
-            "16:50"
-          ]
-        },
-        {
-          "date": "2023-06-30",
-          "times": [
-            "16:53"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "21:06"
-          ]
-        },
-        {
-          "date": "2023-06-27",
-          "times": [
-            "16:17",
-            "16:21",
-            "16:23",
-            "16:19",
-            "16:26"
-          ]
-        },
-        {
-          "date": "2023-05-31",
-          "times": [
-            "16:37",
-            "16:37"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "14:00"
-          ]
-        }
-      ]
+      "releaseDate": "2023-06-23"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
@@ -426,68 +189,7 @@
       "director": "Doyama Takumi",
       "duration": 105,
       "category": "Anime, Family, Adventure",
-      "releaseDate": "2023-09-26",
-      "showtimes": [
-        {
-          "date": "2023-05-20",
-          "times": [
-            "20:30"
-          ]
-        },
-        {
-          "date": "2023-05-21",
-          "times": [
-            "19:32"
-          ]
-        },
-        {
-          "date": "2023-06-25",
-          "times": [
-            "16:46"
-          ]
-        },
-        {
-          "date": "2023-06-28",
-          "times": [
-            "16:50"
-          ]
-        },
-        {
-          "date": "2023-06-30",
-          "times": [
-            "16:53"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "21:06"
-          ]
-        },
-        {
-          "date": "2023-06-27",
-          "times": [
-            "16:17",
-            "16:21",
-            "16:23",
-            "16:19",
-            "16:26"
-          ]
-        },
-        {
-          "date": "2023-05-31",
-          "times": [
-            "16:37",
-            "16:37"
-          ]
-        },
-        {
-          "date": "2023-05-20",
-          "times": [
-            "14:00"
-          ]
-        }
-      ]
+      "releaseDate": "2023-09-26"
     }
   ],
   "discounts": [
