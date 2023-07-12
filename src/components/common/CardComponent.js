@@ -7,6 +7,36 @@ import { Link } from "react-router-dom";
 
 const CardComponent = ({ apiUrl, heading }) => {
   const [movies, setMovies] = useState([]);
+  const PrevArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          color: "red",
+          fontSize: "50px",
+          cursor: "pointer",
+        }}
+        onClick={onClick}
+      ></div>
+    );
+  };
+
+  const NextArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          color: "blue",
+          fontSize: "50px",
+          cursor: "pointer",
+        }}
+        onClick={onClick}
+      ></div>
+    );
+  };
   const settings = {
     dots: true,
     infinite: true,
@@ -58,7 +88,7 @@ const CardComponent = ({ apiUrl, heading }) => {
   }, []);
 
   return (
-    <Container style={{marginBottom: "50px"}}>
+    <Container style={{ marginBottom: "50px" }}>
       <h1 style={{ margin: "30px 0px 30px" }}>{heading}</h1>
       <Slider {...settings}>
         {movies.map((item) => (

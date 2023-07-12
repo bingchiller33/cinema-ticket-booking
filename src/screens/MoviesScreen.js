@@ -7,7 +7,7 @@ const MoviesScreen = () => {
   const navigate = useNavigate()
   const [movie, setMovie] = useState([])
   const [status, setStatus] = useState('All')
-  const [searchMovie, setSearchMovie] = useState('') 
+  const [searchMovie, setSearchMovie] = useState('')
   useEffect(() => {
     let currentDate = new Date();
     let year = currentDate.getFullYear();
@@ -27,10 +27,10 @@ const MoviesScreen = () => {
         return true && d.movieName.toLowerCase().startsWith(searchMovie.toLowerCase())
       })
       ))
-  }, [status, searchMovie]) 
+  }, [status, searchMovie])
   const handleOnchangeSelect = (e) => {
     setStatus(e.target.value)
-  } 
+  }
   return (
     <DefaultTemplate>
       <Container>
@@ -67,21 +67,22 @@ const MoviesScreen = () => {
                 {
                   movie.map(m => (
                     <Col xs={3} key={m.id} className='pb-4'>
-                      <Card key={m.id} className='card_container'>
-                        <Card.Img className='card_movie_img' variant="top" src={m.movieImage} />
-                        <Card.Body className="card-body_movie">
-                          <Card.Title className='card-body_title'><Link to={'/'} className='movie_title'>{m.movieName}</Link></Card.Title>
-                          <Card.Text className='card-text_component'><span>Actor:</span> {m.actor}</Card.Text>
+                      <Card key={m.id} className='card_container position-relative'>
+                        <Link to={'/detail/' + m.id}><Card.Img className='card_movie_img' variant="top" src={m.movieImage} /></Link>
+                        <Card.Body className="card-body_movie" id={m.id} style={{ height: '180px', maxHeight: 'none', minHeight: '0' }}>
+                          <Card.Title className='card-body_title'><Link to={'/detail/' + m.id} className='movie_title'>{m.movieName}</Link></Card.Title>
                           <Card.Text className='card-text_component'><span>Duration:</span> {m.duration} minute</Card.Text>
                           <Card.Text className='card-text_component'><span>Category:</span> {m.category} minute</Card.Text>
                           <Card.Text className='card-text_component'><span>Premiere:</span> {m.releaseDate}</Card.Text>
-                          <Row>
-                            <Col xs={12} className='text-center pt-2 d-flex justify-content-around'> 
-                                <Button className={'btn-danger'}><Link className='movie_detail_link' to={'/detail/'+m.id}>View Detail</Link></Button>
-                                <Button className={'btn-danger'}><Link className='movie_detail_link' to={'/booking/'+m.id}>Buy Ticket</Link></Button>
+                        </Card.Body>
+                        <Container>
+                          <Row className='pt-2 pb-4'>
+                            <Col xs={12} className='text-center d-flex justify-content-around position-absolute' >
+                              <Button><Link className='movie_detail_link' to={'/detail/' + m.id}>View Detail</Link></Button>
+                              <Button className={'btn-danger'}><Link className='movie_detail_link' to={'/booking/' + m.id}>Buy Ticket</Link></Button>
                             </Col>
                           </Row>
-                        </Card.Body>
+                        </Container>
                       </Card>
                     </Col>
                   ))

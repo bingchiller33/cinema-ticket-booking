@@ -1,28 +1,20 @@
 {
   "customers": [
     {
-      "username": "jgsec3ihkt",
-      "email": "luosng6866@gmail.com",
-      "phoneNumber": "0275297014",
-      "password": "a",
-      "passwordConfirm": "a",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "phoneNumber": "0375297014",
+      "password": "6fc8c302d25b8d338b123e3dba6321086bbcf793e36a7d828d2a18ee8ad0af23",
+      "role": 1,
       "id": 1
     },
     {
-      "username": "admin",
+      "username": "user",
       "email": "user@gmail.com",
-      "phoneNumber": "0375297014",
-      "password": "Ac123456",
-      "passwordConfirm": "Ac123456",
-      "id": 2
-    },
-    {
-      "username": "admin",
-      "email": "adsmin@gmail.com",
       "phoneNumber": "0375297013",
-      "password": "Ac12345678",
-      "passwordConfirm": "Ac12345678",
-      "id": 3
+      "password": "26d9b0e9924f0b3d393dc68bbe59486719d3ef51854545a0bb056ef271ba6fba",
+      "role": 1,
+      "id": 2
     }
   ],
   "bookings": [

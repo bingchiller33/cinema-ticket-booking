@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap' 
+import { SHA256 } from 'crypto-js';
+import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { ArrowLeft } from 'react-bootstrap-icons';
 import FormGroup from '../components/common/FormGroup'
@@ -10,8 +11,7 @@ const initFormValue = {
     username: '',
     email: '',
     phoneNumber: '',
-    password: '',
-    passwordConfirm: ''
+    password: ''
 }
 const isEmptyValue = (value) => {
     return value.trim().length === 0
@@ -40,7 +40,8 @@ function Register() {
     const [formValue, setFormValue] = useState(initFormValue)
     const [formError, setFormError] = useState({})
     const [emailExist, setEmailExist] = useState([])
-    const [phoneNumberExist, setPhoneNumberExist] = useState([]) 
+    const [passwordConfirm, setPasswordConfirm] = useState([])
+    const [phoneNumberExist, setPhoneNumberExist] = useState([])
     const validateForm = (parentElement, e) => {
         const formErrorMessage = parentElement.querySelector('.form-message')
         const { name } = e
@@ -56,10 +57,10 @@ function Register() {
                 error['password'] = 'Wrong format contain at least uppercase, lowercase, digit and no specical character.'
             }
         }
-        if (isEmptyValue(formValue.passwordConfirm)) {
+        if (isEmptyValue(inputPasswordConfirm.current.value)) {
             error['passwordConfirm'] = 'Password comfirm can not is empty'
         } else {
-            if (formValue.passwordConfirm !== formValue.password) {
+            if (inputPasswordConfirm.current.value !== formValue.password) {
                 error['passwordConfirm'] = 'Password confirm is not correct'
             }
         }
@@ -94,15 +95,18 @@ function Register() {
             parentElement.classList.remove('invalid')
         }
         return Object.keys(error).length === 0
-    }
+    } 
     const handleOnChange = (e) => {
         const { value, name } = e.target
-        if (name !== 'active') {
+        if (name !== 'active' && name !== 'passwordConfirm') {
             setFormValue({
                 ...formValue,
                 [name]: value
             })
         }
+    }
+    const handleOnChangePasswordConfirm = (e) => {
+        setPasswordConfirm(e.target.value)
     }
     const getParentElement = (element) => {
         let formGroup = '.form-group_register'
@@ -158,7 +162,7 @@ function Register() {
                 try {
                     await axios.post('http://localhost:9999/customers', Customer)
                         .then(response => {
-                            if (response.status >= 200 && response.status < 300) { 
+                            if (response.status >= 200 && response.status < 300) {
                                 localStorage.setItem('register_success', 'register_success')
                                 navigate('/login')
                             }
@@ -190,11 +194,16 @@ function Register() {
             if (phoneNumberExist.length === 0 && emailExist.length === 0) {
                 const keys = Object.keys(formValue)
                 keys.some(id => {
-                    if (id !== 'customerId' && document.getElementById(id).value !== '') {
-                        count++
-                        if (count === 5) {
-                            addUser(formValue)
-                            console.log(count);
+                    if (id !== 'customerId' && id !== 'role' && document.getElementById(id).value !== '') {
+                        count++ 
+                        if (count === 4) {
+                            addUser({
+                                username: formValue.username,
+                                email: formValue.email,
+                                phoneNumber: formValue.phoneNumber,
+                                password: SHA256(formValue.password).toString(),
+                                role: 1
+                            })
                             return true
                         }
                     } else {
@@ -202,18 +211,17 @@ function Register() {
                     }
                     return false
                 })
-
             }
         } else {
             e.preventDefault()
         }
     }
-    
+
     return (
         <Container>
             <Row>
                 <Col xs={12} className='mt-2 mb-3' >
-                    <h3><Link className='btn-home_link' to={'/'}><ArrowLeft/> Homepage</Link></h3>
+                    <h3><Link className='btn-home_link' to={'/'}><ArrowLeft /> Homepage</Link></h3>
                 </Col>
             </Row>
             <Row className='border'>
@@ -229,7 +237,7 @@ function Register() {
                                 <FormGroup className={'form-group_register'} md={12} inputRef={inputEmail} label={'Email'} placeholder={'abc@gmail.com'} name={'email'} value={formValue.email} onBlur={handleOnBlur} onFocus={handleOnFocus} onChange={handleOnChange} />
                                 <FormGroup className={'form-group_register'} md={12} inputRef={inputPhoneNumber} label={'Phone number'} placeholder={'0375297280'} name={'phoneNumber'} value={formValue.phoneNumber} onBlur={handleOnBlur} onFocus={handleOnFocus} onChange={handleOnChange} />
                                 <FormGroup className={'form-group_register'} md={12} inputRef={inputPassword} type={'password'} label={'Password'} placeholder={'Ab123456'} name={'password'} value={formValue.password} onBlur={handleOnBlur} onFocus={handleOnFocus} onChange={handleOnChange} />
-                                <FormGroup className={'form-group_register'} md={12} inputRef={inputPasswordConfirm} type={'password'} label={'Password confirm'} placeholder={'Ab123456'} name={'passwordConfirm'} value={formValue.passwordConfirm} onBlur={handleOnBlur} onFocus={handleOnFocus} onChange={handleOnChange} />
+                                <FormGroup className={'form-group_register'} md={12} inputRef={inputPasswordConfirm} type={'password'} label={'Password confirm'} placeholder={'Ab123456'} name={'passwordConfirm'} value={passwordConfirm} onBlur={handleOnBlur} onFocus={handleOnFocus} onChange={handleOnChangePasswordConfirm} />
                                 <Row>
                                     <Col md={12} className="pl-4">
                                         <Form.Group className='form-group_register'>

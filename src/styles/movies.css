@@ -1,18 +1,19 @@
 .card-body_movie {
-    padding: 10px 0 95px !important; 
-    max-height: none;
-    height: 226px;
-    min-height: 81px; 
+    padding: 10px 0 25px !important; 
+    /* max-height: none;
+    height: auto;
+    min-height: 200px;  */
 }
 .card_movie_img {
-    height: 260px;
-    border: 6px solid;
+    height: 310px;
+    border: 6px solid #000;
 }
 .card-body_title {
     font-weight: bold !important;
 }
 .card-text_component {
     margin: 0;
+    font-size: 14px;
 }
 .card-text_component > span {
     font-weight: bold;
@@ -23,11 +24,12 @@
 .search_movie {
     margin: 20px 0 !important;
     padding: 20px 0;
-    border-bottom: 4px solid #000;
+    border-bottom: 2px solid #000;
 }
 .movie_title {
     text-decoration: none;
     color: #000;
+    font-size: 18px;
 }
 .movie_title:hover {
     opacity: 0.8;
@@ -42,3 +44,9 @@
     text-decoration: none;
     color: #fff;
 }
+.table_movie_detail > td {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    border: 0;
+}
+ 

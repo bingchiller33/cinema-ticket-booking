@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
 import { ArrowLeft } from 'react-bootstrap-icons'
 import { toast } from 'react-toastify';
+import { SHA256 } from 'crypto-js';
 import { Link, useNavigate } from 'react-router-dom'
 import FormGroup from '../components/common/FormGroup'
 import '../styles/register.css'
@@ -34,6 +35,7 @@ function Login() {
     const [formValue, setFormValue] = useState(initFormValue)
     const [formError, setFormError] = useState({})
     const [acountExist, setAcountExist] = useState(false)
+    const [password, setPassword] = useState(false)
     const [customer, setCustomer] = useState({})
     const [rem, setRem] = useState(true)
     if (localStorage.getItem('register_success')) {
@@ -76,12 +78,15 @@ function Login() {
         return Object.keys(error).length === 0
     }
     const handleOnChange = (e) => {
-        const { value, name } = e.target
+        const { value, name } = e.target 
         if (name !== 'active') {
             setFormValue({
                 ...formValue,
                 [name]: value
             })
+        }
+        if (name === 'password') {
+            setPassword(value)
         }
         setRem(inputCheck.current.checked)
     }
@@ -100,12 +105,8 @@ function Login() {
     useEffect(() => {
         const getRem = localStorage.getItem('rem')
         const getCustomer = JSON.parse(localStorage.getItem('customer'))
-        if (getRem && getCustomer) { 
-            setFormValue({
-                ...formValue,
-                ['phoneNumber']: getCustomer.phoneNumber,
-                ['password']: getCustomer.password
-            })
+        if (getRem && getCustomer) {
+            setFormValue(getCustomer)
         }
     }, [])
     const handleOnBlur = (e) => {
@@ -115,7 +116,7 @@ function Login() {
         const formErrorMessage = getParentElement(e.target).querySelector('.form-message')
         formErrorMessage.innerText = ''
         getParentElement(e.target).classList.remove('invalid')
-    }
+    } 
     useEffect(() => {
         fetch('http://localhost:9999/customers')
             .then(res => res.json())
@@ -123,10 +124,13 @@ function Login() {
                 if (c.phoneNumber === inputPhoneNumber.current.value && c.password === inputPassword.current.value) {
                     setCustomer(c)
                     return true
+                } else if (c.phoneNumber === inputPhoneNumber.current.value && c.password === SHA256(password).toString()){
+                    setCustomer(c)
+                    return true
                 }
-                return false
+                    return false
             })))
-    }, [inputPassword.current.value])
+    }, [inputPassword.current.value, inputPhoneNumber.current.value])
     const handleOnSubmit = (e) => {
         e.preventDefault()
         if (!inputPhoneNumber.current.value) {
@@ -140,7 +144,6 @@ function Login() {
                 localStorage.setItem('loginTime', new Date().getTime());
                 localStorage.setItem('rem', rem);
                 localStorage.setItem('customer', JSON.stringify(customer));
-                console.log(rem);
             } else {
                 e.preventDefault()
                 const formErrorMessage = getParentElement(document.getElementById('phoneNumber')).querySelector('.form-message')
@@ -158,7 +161,7 @@ function Login() {
         <Container className='mt-5 pt-2' >
             <Row>
                 <Col xs={12} className='mt-2 mb-3' >
-                    <h3><Link className='btn-home_link' to={'/'}><ArrowLeft/> Homepage</Link></h3>
+                    <h3><Link className='btn-home_link' to={'/'}><ArrowLeft /> Homepage</Link></h3>
                 </Col>
             </Row>
             <Row className='border center-xs middle-xs'>
