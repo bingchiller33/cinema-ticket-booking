@@ -42,80 +42,173 @@
       "password": "admin123"
     }
   ],
-  "showtimes": [
+  "showdates": [
     {
       "id": 1,
       "movieId": 1,
-      "date": "2023-05-20",
-      "times": "14:00"
+      "date": "20-05-2023"
     },
     {
       "id": 2,
+      "movieId" :2,
+      "date": "20-05-2023"
+    }
+  ],
+  "showdates": [
+    {
+      "id": 1,
       "movieId": 1,
-      "date": "2023-05-20",
-      "times": "15:00"
+      "date": "20-05-2023"
+    },
+    {
+      "id": 2,
+      "movieId": 2,
+      "date": "20-05-2023"
     },
     {
       "id": 3,
       "movieId": 1,
-      "date": "2023-05-21",
-      "times": "14:00"
+      "date": "21-05-2023"
     },
     {
       "id": 4,
       "movieId": 2,
-      "date": "2023-05-20",
-      "times": "14:00"
+      "date": "21-05-2023"
     },
     {
       "id": 5,
-      "movieId": 2,
-      "date": "2023-05-20",
-      "times": "15:00"
+      "movieId": 3,
+      "date": "21-05-2023"
     },
     {
       "id": 6,
-      "movieId": 2,
-      "date": "2023-05-21",
-      "times": "14:00"
+      "movieId": 4,
+      "date": "21-05-2023"
     },
     {
       "id": 7,
-      "movieId": 3,
-      "date": "2023-05-20",
-      "times": "14:00"
+      "movieId": 1,
+      "date": "22-05-2023"
     },
     {
       "id": 8,
-      "movieId": 3,
-      "date": "2023-05-20",
-      "times": "15:00"
+      "movieId": 2,
+      "date": "22-05-2023"
     },
     {
       "id": 9,
       "movieId": 3,
-      "date": "2023-05-21",
-      "times": "14:00"
+      "date": "22-05-2023"
     },
     {
       "id": 10,
       "movieId": 4,
-      "date": "2023-05-20",
-      "times": "14:00"
+      "date": "22-05-2023"
+    }
+  ],
+  "showtimes": [
+    {
+      "id": 1,
+      "dateId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 2,
+      "dateId": 1,
+      "time": "15:00"
+    },
+    {
+      "id": 3,
+      "dateId": 2,
+      "time": "14:00"
+    },
+    {
+      "id": 4,
+      "dateId": 2,
+      "time": "15:00"
+    },
+    {
+      "id": 5,
+      "dateId": 3,
+      "time": "14:00"
+    },
+    {
+      "id": 6,
+      "dateId": 3,
+      "time": "15:00"
+    },
+    {
+      "id": 7,
+      "dateId": 4,
+      "time": "14:00"
+    },
+    {
+      "id": 8,
+      "dateId": 4,
+      "time": "15:00"
+    },
+    {
+      "id": 9,
+      "dateId": 5,
+      "time": "14:00"
+    },
+    {
+      "id": 10,
+      "dateId": 5,
+      "time": "15:00"
     },
     {
       "id": 11,
-      "movieId": 4,
-      "date": "2023-05-20",
-      "times": "15:00"
+      "dateId": 6,
+      "time": "14:00"
     },
     {
       "id": 12,
-      "movieId": 4,
-      "date": "2023-05-21",
-      "times": "14:00"
+      "dateId": 6,
+      "time": "15:00"
+    },
+    {
+      "id": 13,
+      "dateId": 7,
+      "time": "14:00"
+    },
+    {
+      "id": 14,
+      "dateId": 7,
+      "time": "15:00"
+    },
+    {
+      "id": 15,
+      "dateId": 8,
+      "time": "14:00"
+    },
+    {
+      "id": 16,
+      "dateId": 8,
+      "time": "15:00"
+    },
+    {
+      "id": 17,
+      "dateId": 9,
+      "time": "14:00"
+    },
+    {
+      "id": 18,
+      "dateId": 9,
+      "time": "15:00"
+    },
+    {
+      "id": 19,
+      "dateId": 10,
+      "time": "14:00"
+    },
+    {
+      "id": 20,
+      "dateId": 10,
+      "time": "15:00"
     }
   ],
+  
   "movies": [
     {
       "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--3_1688111575146.jpg",
