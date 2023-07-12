@@ -35,7 +35,7 @@ const Header = () => {
               Movies
             </NavLink>
             <NavLink
-              to="/booking"
+              to="/"
               className={({ isActive }) => (isActive ? "active-link" : "link")}
             >
               Poster
