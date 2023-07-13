@@ -44,65 +44,143 @@
   ],
   "movies": [
     {
-      "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/2/17/antman-3-2_1676601186349.jpg",
-      "movieId": 1,
-      "movieName": "Ant-Man and the Wasp: Quantumania",
-      "actor": "Robert Downey Jr.",
-      "director": "Joss Whedon",
-      "releaseDate": "2012-04-11"
-    },
-    {
-      "movieBanner": "https://web.archive.org/web/20230618174728im_/https://cdn.galaxycine.vn/media/2023/5/18/2048x682_1684396421946.jpg",
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/18/300x450_1684396285003.jpg",
-      "movieId": 2,
-      "movieName": "Spider-Man: Across the Spider-Verse ",
+      "id": 2,
+      "name": "Spider-Man: Across the Spider-Verse ",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689160491/samples/toannkp/poster-spacepups_zormbd.jpg",
+      "banner": "https://web.archive.org/web/20230618174728im_/https://cdn.galaxycine.vn/media/2023/5/18/2048x682_1684396421946.jpg",
       "actor": "Spider Man",
       "director": "Joaquim Dos Santos",
-      "releaseDate": "2023-06-01"
+      "date": "01-01-2002",
+      "duration": 100,
+      "category": "Gangster,Science Fiction",
+      "description": "The 7th part of the Mission Impossible series",
+      "trailer": "https://www.youtube.com/embed/AX7lnd9w_yc"
     },
     {
-      "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/15/doraemon-utopia-2_1684121814838.jpg",
-      "movieId": 3,
-      "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
+      "banner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
+      "image": "https://cdn.galaxycine.vn/media/2023/5/15/doraemon-utopia-2_1684121814838.jpg",
+      "id": 3,
+      "name": "Doraemon The Movie: Nobita's Sky Utopia",
       "actor": "Nobita",
       "director": "Doyama Takumi",
-      "releaseDate": "2023-05-26"
+      "date": "01-01-2002",
+      "duration": 100,
+      "category": "Animated, FantasyAnimated, Fantasy",
+      "showtimes": [],
+      "description": "The 7th part of the Mission Impossible series",
+      "trailer": "https://www.youtube.com/embed/AX7lnd9w_yc"
     },
     {
-      "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/19/300x450_1684480233307.jpg",
-      "movieId": 4,
-      "movieName": "TRANSFORMERS: RISE OF THE BEAST",
+      "banner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
+      "image": "https://cdn.galaxycine.vn/media/2023/5/19/300x450_1684480233307.jpg",
+      "id": 4,
+      "name": "TRANSFORMERS: RISE OF THE BEAST",
       "actor": "Ron Perlman",
       "director": "Steven Caple Jr.",
-      "releaseDate": "2023-06-09"
+      "date": "01-01-2002",
+      "duration": 100,
+      "category": "Animated, FantasyAnimated, Fantasy",
+      "showtimes": [],
+      "description": "The 7th part of the Mission Impossible series",
+      "trailer": "https://www.youtube.com/embed/AX7lnd9w_yc"
     },
     {
-      "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/12/2048x682_1686554041241.jpg",
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/6/12/300x450_1686553793493.jpg",
-      "movieId": 5,
-      "movieName": "ELEMENTAL",
+      "banner": "https://cdn.galaxycine.vn/media/2023/6/12/2048x682_1686554041241.jpg",
+      "image": "https://cdn.galaxycine.vn/media/2023/6/12/300x450_1686553793493.jpg",
+      "id": 5,
+      "name": "ELEMENTAL",
       "actor": "Mamoudou Athie",
       "director": "Peter Sohn",
-      "releaseDate": "2023-06-23"
+      "date": "01-01-2002",
+      "duration": 100,
+      "category": "Animated, FantasyAnimated, Fantasy",
+      "showtimes": [],
+      "description": "The 7th part of the Mission Impossible series",
+      "trailer": "https://www.youtube.com/embed/AX7lnd9w_yc"
     },
     {
-      "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/18/300x450_1684396285003.jpg",
-      "movieId": 6,
-      "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
-      "actor": "Nobita",
-      "director": "Doyama Takumi",
-      "releaseDate": "2023-05-26"
+      "id": 6,
+      "name": "MISSION: IMPOSSIBLE DEAD RECKONING PART ONE",
+      "image": "https://www.cgv.vn/media/catalog/product/cache/3/image/c5f0a1eff4c394a251036189ccddaacd/7/0/700x1000_7_.jpg",
+      "banner": "https://www.cgv.vn/media/banner/cache/3/b58515f018eb873dafa430b6f9ae0c1e/r/s/rsz_980x448_mp7_1.jpg",
+      "actor": " Tom Cruise, Rebecca Ferguson, Vanessa Kirby",
+      "director": "Christopher McQuarrie",
+      "date": "01-01-2002",
+      "duration": 100,
+      "category": "Animated, FantasyAnimated, Fantasy",
+      "showtimes": [],
+      "description": "The 7th part of the Mission Impossible series",
+      "trailer": "https://www.youtube.com/embed/AX7lnd9w_yc",
+      "views": 0
+    },
+    {
+      "id": 7,
+      "name": "aa",
+      "image": "aaa",
+      "banner": "aaaa",
+      "actor": "aaaa",
+      "director": "aaa",
+      "date": "2002-01-01",
+      "duration": "qqqq",
+      "category": "Science Fiction",
+      "description": "aaaa"
+    },
+    {
+      "id": 8,
+      "name": "aaaa",
+      "image": "aaaa",
+      "banner": "aaaa",
+      "actor": "aaaa",
+      "director": "aaaa",
+      "date": "20202-01-01",
+      "duration": "aaaa",
+      "category": "Courtroom Drama",
+      "description": "aaa",
+      "trailer": "aaaaa",
+      "views": 0
+    },
+    {
+      "id": 9,
+      "name": "aa",
+      "image": "aaa",
+      "banner": "aaa",
+      "actor": "aa",
+      "director": "aaa",
+      "date": "3333-11-22",
+      "duration": "aaa",
+      "category": [
+        "Science Fiction",
+        "Western",
+        "Sports",
+        "Mystery",
+        "Romantic Drama"
+      ],
+      "description": "aaa",
+      "trailer": "aaaa",
+      "views": 0
+    },
+    {
+      "id": 10,
+      "name": "aaa",
+      "image": "C:\\fakepath\\700x1000_7_.jpg",
+      "banner": "aaa",
+      "actor": "aaa",
+      "director": "aaa",
+      "date": "1111-11-11",
+      "duration": "aaa",
+      "category": [
+        "Science Fiction",
+        "Western",
+        "Sports"
+      ],
+      "description": "aaa"
     }
   ],
   "discounts": [
     {
       "offerId": 1,
       "price": 5.99,
-      "movieName": "The Avengers"
+      "name": "The Avengers"
     }
   ],
   "theatres": [

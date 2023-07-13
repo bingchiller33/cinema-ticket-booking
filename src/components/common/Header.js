@@ -40,6 +40,12 @@ const Header = () => {
             >
               Poster
             </NavLink>
+            <NavLink
+              to="/crud"
+              className={({ isActive }) => (isActive ? "active-link" : "link")}
+            >
+              Admin
+            </NavLink>
             {/* Add more links as needed */}
           </Nav>
         </Navbar.Collapse>
