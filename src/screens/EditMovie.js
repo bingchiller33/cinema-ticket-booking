@@ -11,10 +11,11 @@ const EditMovie = () => {
     const [actor, setActor] = useState("");
     const [director, setDirector] = useState("");
     const [date, setDate] = useState("");
-    const [duration, setDuration] = useState("");
+    const [duration, setDuration] = useState(0);
     const [category, setCategory] = useState([]);
     const [description, setDescription] = useState("");
     const [trailer, setTrailer] = useState("");
+    const [priceticket, setPriceticket] = useState(0);
 
     useEffect(() => {
         fetch(" http://localhost:8889/movies/" + mid)
@@ -33,6 +34,7 @@ const EditMovie = () => {
                 setCategory(res.category);
                 setDescription(res.description);
                 setTrailer(res.trailer);
+                setPriceticket(res.priceticket);
             })
             .catch((err) => {
                 console.log(err.message);
@@ -45,8 +47,8 @@ const EditMovie = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empdata = { id, name, image, banner, actor, director, date, duration, category, description, trailer };
-        if (name.length === 0 || image.length === 0 || banner.length === 0 || actor.length === 0 || director.length === 0 || date.length === 0 || duration.length === 0 || category.length === 0 || description.length === 0 || trailer.length === 0) {
+        const empdata = { id, name, image, banner, actor, director, date, duration, category, description, trailer, priceticket };
+        if (name.length === 0 || image.length === 0 || banner.length === 0 || actor.length === 0 || director.length === 0 || date.length === 0 || duration === 0 || category.length === 0 || description.length === 0 || trailer.length === 0 || priceticket === 0) {
             alert('Please fill all fields');
         }
         else {
@@ -263,6 +265,23 @@ const EditMovie = () => {
                             {trailer.length === 0 && (
                                 <label style={{ color: "red" }}>
                                     Please pick date of trailer
+                                </label>
+                            )}
+                        </Form.Group>
+
+                        <Form.Group style={{ marginBottom: '20px' }}>
+                            <Form.Label style={{ fontWeight: 'bold' }}>
+                                PriceTicket
+                                <span style={{ color: 'red' }}>*</span>
+                            </Form.Label>
+                            <Form.Control
+                                type="text"
+                                value={priceticket}
+                                onChange={(e) => setPriceticket(e.target.value)}
+                            />
+                            {priceticket.length === 0 && (
+                                <label style={{ color: "red" }}>
+                                    Please enter price of ticket
                                 </label>
                             )}
                         </Form.Group>

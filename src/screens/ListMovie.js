@@ -31,7 +31,7 @@ const ListMovie = () => {
 
     return (
         <Row>
-            <Col md={10} style={{ margin: '0 auto' }}>
+            <Col md={11} style={{ margin: '0 auto' }}>
                 <Row>
                     <Col style={{ textAlign: 'right' }}>
                         <Link to={"/create"} style={{ textDecoration: 'none', }}><Button className="btn btn-success">Create Movie</Button></Link>
@@ -41,8 +41,7 @@ const ListMovie = () => {
                 <Row>
                     <Table>
                         <thead>
-                            <tr>
-                                <th>Id</th>
+                            <tr style={{ fontWeight: 'bold' }}>
                                 <th>Image</th>
                                 <th>Banner</th>
                                 <th>Name</th>
@@ -53,6 +52,7 @@ const ListMovie = () => {
                                 <th>Category</th>
                                 <th>Description</th>
                                 <th>Description</th>
+                                <th>PriceTicket</th>
                                 <th>CRUD</th>
                             </tr>
 
@@ -62,7 +62,6 @@ const ListMovie = () => {
                             {
                                 movie.map(m => (
                                     <tr key={m.id}>
-                                        <td>{m.id}</td>
                                         <td><Image src={m.image} fluid style={{ maxWidth: '100px', maxHeight: '100px' }}></Image></td>
                                         <td><Image src={m.banner} fluid style={{ maxWidth: '100px', maxHeight: '100px' }}></Image></td>
                                         <td>{m.name}</td>
@@ -72,7 +71,8 @@ const ListMovie = () => {
                                         <td>{m.duration}</td>
                                         <td>{m.category + ","}</td>
                                         <td>{m.description}</td>
-                                        <td>{m.trailer}</td>
+                                        <td><a href={m.trailer}>{m.trailer}</a></td>
+                                        <td>{m.priceticket}</td>
                                         <td>
                                             <Link to={"/edit/" + m.id}><Button>Edit</Button></Link>
 
