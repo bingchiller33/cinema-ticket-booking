@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import {HandIndexThumb} from 'react-bootstrap-icons'
+import { HandIndexThumb } from 'react-bootstrap-icons'
 import { Button, Col, Container, Form, Row, Table } from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import DefaultTemplate from '../templates/DefaultTemplate';
 import '../styles/detailMovie.css'
 const BookingScreen = () => {
   const { mid } = useParams()
+  const navigate = useNavigate('')
+  const [showtime, setShowtime] = useState([])
   const [movie, setMovie] = useState({})
   const [click, setClick] = useState(true)
   useEffect(() => {
@@ -14,7 +16,17 @@ const BookingScreen = () => {
       .then(data => setMovie(data))
   }, [])
   const handleClick = (e) => {
-    setClick(e.target.innerText==="Detail"?true:false)
+    setClick(e.target.innerText === "Detail" ? true : false)
+  }
+  useEffect(() => {
+    fetch('http://localhost:9999/showdates?movieId=' + mid)
+      .then(res => res.json())
+      .then(data => setShowtime(data))
+  }, [])
+  const handleClickBuyTicket = (e) => {
+    if(showtime.length!==0){
+      navigate('/booking/'+mid)
+    }
   }
   return (
     <DefaultTemplate>
@@ -74,7 +86,7 @@ const BookingScreen = () => {
                       </Table>
                     </Col>
                     <Col>
-                      <Link className={'movie_detail_link'} to={'/booking/' + movie.id}><Button className='btn-danger'>Buy Ticket</Button></Link>
+                      <Button className={showtime.length===0?'d-none': 'btn-danger'}  onClick={(e) => handleClickBuyTicket(e)}>Buy Ticket</Button>
                     </Col>
                   </Row>
                 </Col>
@@ -82,17 +94,17 @@ const BookingScreen = () => {
               <Row className='p-3'>
                 <Col xs={12} className={'d-flex justify-content-center'}>
                   <ul className='movie_detail_trailer text-center d-flex justify-content-center'>
-                    <li className='movie_detail_1'><span onClick={(e)=>handleClick(e)}>Detail{click?<HandIndexThumb size={20} className={'pb-1'}/>:''}</span></li>
-                    <li className='movie_detail_2'><span onClick={(e)=>handleClick(e)}>Trailer{click?'':<HandIndexThumb size={20} className={'pb-1'}/>}</span></li>
+                    <li className='movie_detail_1'><span onClick={(e) => handleClick(e)}>Detail{click ? <HandIndexThumb size={20} className={'pb-1'} /> : ''}</span></li>
+                    <li className='movie_detail_2'><span onClick={(e) => handleClick(e)}>Trailer{click ? '' : <HandIndexThumb size={20} className={'pb-1'} />}</span></li>
                   </ul>
                 </Col>
               </Row>
               <Row className='pt-2 pb-4'>
-                <Col xs={12} id={'movie_description'} className={click?'':'d-none'}>
+                <Col xs={12} id={'movie_description'} className={click ? '' : 'd-none'}>
                   <span>{movie.description}Keep in mind that the filter property may not be supported in older browsers or certain versions of some browsers. It's a good practice to test your code across different browsers to ensure compatibility.</span>
                 </Col>
-                <Col xs={12}  id={'movie_trailer'} className={click?'d-flex justify-content-center d-none':'d-flex justify-content-center'}>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/shW9i6k8cB0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                <Col xs={12} id={'movie_trailer'} className={click ? 'd-flex justify-content-center d-none' : 'd-flex justify-content-center'}>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/shW9i6k8cB0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </Col>
               </Row>
             </Container>
