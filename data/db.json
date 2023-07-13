@@ -50,18 +50,6 @@
     },
     {
       "id": 2,
-      "movieId" :2,
-      "date": "20-05-2023"
-    }
-  ],
-  "showdates": [
-    {
-      "id": 1,
-      "movieId": 1,
-      "date": "20-05-2023"
-    },
-    {
-      "id": 2,
       "movieId": 2,
       "date": "20-05-2023"
     },
@@ -108,9 +96,9 @@
   ],
   "showtimes": [
     {
-      "id": 1,
+      "time": "14:00",
       "dateId": 1,
-      "time": "14:00"
+      "id": 1
     },
     {
       "id": 2,
@@ -206,9 +194,13 @@
       "id": 20,
       "dateId": 10,
       "time": "15:00"
+    },
+    {
+      "dateId": 1,
+      "time": "16:00",
+      "id": 21
     }
   ],
-  
   "movies": [
     {
       "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--3_1688111575146.jpg",
@@ -219,7 +211,7 @@
       "director": "Patrick Wilson",
       "duration": 107,
       "category": "Horror, Action, Adventure",
-      "releaseDate": "2023-07-12"
+      "releaseDate": "12-07-2023"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174728im_/https://cdn.galaxycine.vn/media/2023/5/18/2048x682_1684396421946.jpg",
@@ -230,7 +222,7 @@
       "director": "Joaquim Dos Santos",
       "duration": 105,
       "category": "Anime, Family, Comedy",
-      "releaseDate": "2023-06-01"
+      "releaseDate": "01-06-2023"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
@@ -241,7 +233,7 @@
       "director": "Doyama Takumi",
       "duration": 105,
       "category": "Anime, Family, Comedy",
-      "releaseDate": "2023-05-26"
+      "releaseDate": "26-05-2023"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
@@ -252,7 +244,7 @@
       "director": "Steven Caple Jr.",
       "duration": 105,
       "category": "Anime, Emotional, Comedy",
-      "releaseDate": "2023-06-09"
+      "releaseDate": "09-06-2023"
     },
     {
       "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/12/2048x682_1686554041241.jpg",
@@ -263,7 +255,7 @@
       "director": "Peter Sohn",
       "duration": 105,
       "category": "Anime, Adventure, Emotional",
-      "releaseDate": "2023-06-23"
+      "releaseDate": "23-06-2023"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
@@ -274,7 +266,7 @@
       "director": "Doyama Takumi",
       "duration": 105,
       "category": "Anime, Family, Adventure",
-      "releaseDate": "2023-09-26"
+      "releaseDate": "26-09-2023"
     }
   ],
   "discounts": [
@@ -291,6 +283,7 @@
       "location": "City Center"
     }
   ],
+  "rooms": [],
   "halls": [
     {
       "hallId": 1,
