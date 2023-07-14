@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/movies.css'
 import DefaultTemplate from '../templates/DefaultTemplate';
-const MoviesScreen = () => {
-  const navigate = useNavigate()
+const MoviesScreen = () => { 
   const [movie, setMovie] = useState([])
   const [status, setStatus] = useState('All')
   const [searchMovie, setSearchMovie] = useState('')

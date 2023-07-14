@@ -26,121 +26,54 @@
   ],
   "tickets": [
     {
-      "customerId": 1,
-      "movieId": 1,
+      "customerId": 2,
+      "movieId": 2,
       "roomId": 1,
-      "seatId": 1,
-      "showDateId": 1,
-      "showtimesId": 1,
+      "seatId": 15,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "price": 125,
       "id": 1
     },
     {
       "customerId": 2,
       "movieId": 2,
       "roomId": 1,
-      "seatId": 5,
-      "showDateId": 2,
-      "showtimesId": 3,
+      "seatId": 55,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "price": 120,
       "id": 2
     },
     {
       "customerId": 2,
       "movieId": 2,
       "roomId": 1,
-      "seatId": 14,
-      "showDateId": 2,
-      "showtimesId": 3,
+      "seatId": 48,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "price": 120,
       "id": 3
     },
     {
       "customerId": 2,
       "movieId": 2,
       "roomId": 1,
-      "seatId": 25,
-      "showDateId": 2,
-      "showtimesId": 3,
+      "seatId": 38,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "price": 120,
       "id": 4
     },
     {
       "customerId": 2,
       "movieId": 2,
       "roomId": 1,
-      "seatId": 17,
+      "seatId": 32,
       "showDateId": 4,
       "showtimesId": 7,
+      "price": 120,
       "id": 5
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 6,
-      "showDateId": 4,
-      "showtimesId": 7,
-      "id": 6
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 16,
-      "showDateId": 8,
-      "showtimesId": 16,
-      "id": 7
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 8
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 9
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 10
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 11
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 12
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 13
     }
   ],
   "admins": [
@@ -267,12 +200,6 @@
       "dateId": 6,
       "roomId": 1,
       "time": "14:00"
-    },
-    {
-      "id": 12,
-      "dateId": 6,
-      "roomId": 1,
-      "time": "15:00"
     },
     {
       "id": 13,

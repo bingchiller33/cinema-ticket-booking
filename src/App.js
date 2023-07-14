@@ -7,6 +7,7 @@ import Login from "./screens/Login";
 import Register from "./screens/Register";
 import BookingScreen from "./screens/BookingScreen";  
 import ManageShowtimes from "./screens/ManageShowtimes";
+import ViewTiket from "./screens/ViewTicket";
 
 
 function App() { 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/detail/:mid" element={<DetailScreen />} /> 
           <Route path="/showtimes" element={<ManageShowtimes />} />
+          <Route path="/viewticket/:mid" element={<ViewTiket />} />
         </Routes>
     </BrowserRouter>
   );
