@@ -6,7 +6,6 @@ const Header = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-
         <Navbar.Brand as={Link} to="/" className="logo-img">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Square%2C_Inc_-_Square_Logo.jpg/1200px-Square%2C_Inc_-_Square_Logo.jpg"
@@ -35,7 +34,7 @@ const Header = () => {
               Movies
             </NavLink>
             <NavLink
-              to="/"
+              to="/booking"
               className={({ isActive }) => (isActive ? "active-link" : "link")}
             >
               Poster

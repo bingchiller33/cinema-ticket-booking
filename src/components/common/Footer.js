@@ -94,11 +94,6 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-      <div className="footer_watermark">
-        <p style={{ color: "black", textAlign: "center" }}>
-          &copy; {new Date().getFullYear()} Cinema Ticket Booking App
-        </p>
-      </div>
     </footer>
   );
 };

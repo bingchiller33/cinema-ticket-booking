@@ -53,7 +53,13 @@
 }
 
 .footer_watermark {
+    position: unset;
     background-color: white;
-    padding: 2px;
+    padding: 1px;
     align-items: center;
+
+}
+
+.footer_watermark p{
+    margin-bottom: 0px;
 }

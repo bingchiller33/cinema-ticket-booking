@@ -95,7 +95,7 @@ const CardComponent = ({ apiUrl, heading }) => {
           <div key={item.movieId} className="card-card">
             <div className="card-top">
               <img src={item.movieImage} alt={item.movieName} />
-              <Link to="/movies">
+              <Link to={"/detail/"+ item.id}>
                 <h1>{item.movieName}</h1>
               </Link>
             </div>
