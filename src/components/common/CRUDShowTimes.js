@@ -4,6 +4,7 @@ import "../../styles/showtimes.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 export default function CRUDShowTimes() {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -48,8 +49,8 @@ export default function CRUDShowTimes() {
     setEditedShowtime(null);
   };
 
-  const handleShowtimeChange = (showtimeId, newTime, dateId) => {
-    setEditedShowtime({ showtimeId, newTime, dateId });
+  const handleShowtimeChange = (showtimeId, newTime) => {
+    setEditedShowtime({ showtimeId, newTime });
   };
 
   const handleSaveTime = async () => {
@@ -61,23 +62,19 @@ export default function CRUDShowTimes() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ time: editedShowtime.newTime, dateId: editedShowtime.dateId }),
+        body: JSON.stringify({ time: editedShowtime.newTime }),
       });
       if (!response.ok) throw new Error("Failed to update showtime");
 
       const updatedShowtime = await response.json();
       setShowtimes(showtimes.map((showtime) => (showtime.id === updatedShowtime.id ? updatedShowtime : showtime)));
       setEditedShowtime(null);
-      toast.success("Update showtime successfully!");
     } catch (error) {
       console.log(error);
     }
   };
 
   const handleDeleteTime = async (showtimeId) => {
-    const confirmDelete = window.confirm("Are you sure you want to delete this showtime?");
-    if (!confirmDelete) return;
-
     try {
       const response = await fetch(`http://localhost:9999/showtimes/${showtimeId}`, {
         method: "DELETE",
@@ -85,7 +82,6 @@ export default function CRUDShowTimes() {
       if (!response.ok) throw new Error("Failed to delete showtime");
 
       setShowtimes(showtimes.filter((showtime) => showtime.id !== showtimeId));
-      toast.success("Delete showtime successfully!");
     } catch (error) {
       console.log(error);
     }
@@ -95,7 +91,7 @@ export default function CRUDShowTimes() {
     if (!selectedMovie || !newDate || !newTime) return;
 
     let showDate = showDates.find(
-      (showDate) => showDate.movieId === selectedMovie.id && showDate.date === newDate
+      (showDate) => showDate.movieId !== selectedMovie.id || showDate.date !== newDate
     );
 
     if (!showDate) {
@@ -139,7 +135,6 @@ export default function CRUDShowTimes() {
 
       const newShowtime = await response.json();
       setShowtimes([...showtimes, newShowtime]);
-      toast.success("Add showtime successfully!");
     } catch (error) {
       console.log(error);
     }
@@ -147,6 +142,7 @@ export default function CRUDShowTimes() {
     setNewTime("");
   };
 
+  // Lọc danh sách phim theo loại (Phim Đang Chiếu hoặc Phim Sắp Chiếu)
   const filteredMovies = movies.filter((movie) => {
     const [day, month, year] = movie.releaseDate.split("-").map(Number);
     const releaseDate = new Date(year, month - 1, day);
@@ -197,12 +193,10 @@ export default function CRUDShowTimes() {
             <Row>
               {filteredMovies.map((movie) => (
                 <Col xs={3} key={movie.id}>
-                  <div className="movie-select-item" onClick={() => handleShowModal(movie)}>
-                    <div className="movie-select-img" style={{ backgroundImage: `url(${movie.movieImage})` }}></div>
+                  <div className="movie-select-item">
                     <div className="movie-select-content">
-                      <h3 className="movie-select-title">{movie.movieName}</h3>
-                      <p>Premiere: {movie.releaseDate}</p>
-                      <p>Duration: {movie.duration} minutes</p>
+                      <h3 className="movie-select-title fs-4">{movie.movieName}</h3>
+                      <Button onClick={() => handleShowModal(movie)}>Edit</Button>
                     </div>
                   </div>
                 </Col>
@@ -243,18 +237,14 @@ export default function CRUDShowTimes() {
                     <Form.Group key={showtime.id}>
                       {editedShowtime?.showtimeId === showtime.id ? (
                         <>
-                          <Form.Control type="time" value={editedShowtime?.newTime} onChange={(e) => handleShowtimeChange(showtime.id, e.target.value, showtime.dateId)} />
+                          <Form.Control type="time" value={editedShowtime?.newTime} onChange={(e) => handleShowtimeChange(showtime.id, e.target.value)} />
                           <Button onClick={handleSaveTime}>Save</Button>
                           <Button onClick={() => setEditedShowtime(null)}>Cancel</Button>
                         </>
                       ) : (
                         <>
                           <Form.Label>{showtime.time}</Form.Label>
-                          <Button
-                            variant="success"
-                            className="mx-2 my-2"
-                            onClick={() => handleShowtimeChange(showtime.id, showtime.time, showtime.dateId)}
-                          >
+                          <Button variant="success" className="mx-2 my-2" onClick={() => handleShowtimeChange(showtime.id, showtime.time)}>
                             Edit
                           </Button>
                           <Button variant="danger" onClick={() => handleDeleteTime(showtime.id)}>
