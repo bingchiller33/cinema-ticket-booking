@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container, Button, Row, Col, Modal, Form } from "react-bootstrap";
+import { Container, Button, Row, Col, Modal, Form, InputGroup } from "react-bootstrap";
 import "../../styles/showtimes.css";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function CRUDShowTimes() {
   const [movies, setMovies] = useState([]);
@@ -11,10 +10,13 @@ export default function CRUDShowTimes() {
   const [showDates, setShowDates] = useState([]);
   const [showtimes, setShowtimes] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [currentTab, setCurrentTab] = useState("nowShowing");
   const [editedShowtime, setEditedShowtime] = useState(null);
   const [newDate, setNewDate] = useState("");
   const [newTime, setNewTime] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedShowDate, setSelectedShowDate] = useState(null);
+  const [rooms, setRooms] = useState([]);
+  const [selectedRoom, setSelectedRoom] = useState(null);
 
   useEffect(() => {
     const fetchMoviesAndShowtimes = async () => {
@@ -38,88 +40,173 @@ export default function CRUDShowTimes() {
     fetchMoviesAndShowtimes();
   }, []);
 
+  useEffect(() => {
+    const fetchRooms = async () => {
+      try {
+        const response = await fetch("http://localhost:9999/rooms");
+        const data = await response.json();
+        setRooms(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchRooms();
+  }, []);
+
   const handleShowModal = (movie) => {
     setSelectedMovie(movie);
     setShowModal(true);
+    setSelectedShowDate(null);
+    setSelectedRoom(null);
+    setNewTime("");
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedMovie(null);
     setEditedShowtime(null);
+    setSelectedShowDate(null);
+    setSelectedRoom(null);
   };
 
-  const handleShowtimeChange = (showtimeId, newTime) => {
-    setEditedShowtime({ showtimeId, newTime });
+  const handleShowtimeChange = (showtimeId, newTime, roomId, dateId) => {
+    console.log("Edited Showtime:", {
+      showtimeId,
+      newTime,
+      roomId,
+      dateId,
+    });
+  
+    setEditedShowtime((prevEditedShowtime) => ({
+      ...prevEditedShowtime,
+      showtimeId,
+      newTime,
+      roomId,
+      dateId,
+    }));
   };
+  
+  
+
 
   const handleSaveTime = async () => {
     if (!editedShowtime) return;
-
+  
     try {
-      const response = await fetch(`http://localhost:9999/showtimes/${editedShowtime.showtimeId}`, {
+      const { showtimeId, newTime, roomId, dateId } = editedShowtime; // Lấy ra roomId và dateId từ editedShowtime
+  
+      const response = await fetch(`http://localhost:9999/showtimes/${showtimeId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ time: editedShowtime.newTime }),
+        body: JSON.stringify({ time: newTime, roomId, dateId }), // Bao gồm cả roomId và dateId trong body
       });
       if (!response.ok) throw new Error("Failed to update showtime");
-
+  
       const updatedShowtime = await response.json();
       setShowtimes(showtimes.map((showtime) => (showtime.id === updatedShowtime.id ? updatedShowtime : showtime)));
       setEditedShowtime(null);
+      toast.success("Showtime updated successfully!");
     } catch (error) {
       console.log(error);
     }
   };
+  
 
   const handleDeleteTime = async (showtimeId) => {
     try {
+      const confirmDelete = window.confirm("Are you sure you want to delete this showtime?");
+      if (!confirmDelete) return;
+
       const response = await fetch(`http://localhost:9999/showtimes/${showtimeId}`, {
         method: "DELETE",
       });
       if (!response.ok) throw new Error("Failed to delete showtime");
 
       setShowtimes(showtimes.filter((showtime) => showtime.id !== showtimeId));
+      toast.success("Showtime deleted successfully!");
     } catch (error) {
       console.log(error);
     }
   };
 
-  const handleAddTime = async () => {
-    if (!selectedMovie || !newDate || !newTime) return;
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
 
-    let showDate = showDates.find(
-      (showDate) => showDate.movieId !== selectedMovie.id || showDate.date !== newDate
+  const filteredMovies = movies.filter((movie) => {
+    return movie.movieName.toLowerCase().includes(searchQuery.toLowerCase());
+  });
+
+  const handleDateSelect = (selectedDateId) => {
+    setSelectedShowDate(showDates.find((date) => date.id === selectedDateId));
+  };
+
+  const fetchShowtimesByDateId = async (dateId) => {
+    try {
+      const response = await fetch(`http://localhost:9999/showtimes?dateId=${dateId}`);
+      const data = await response.json();
+      setShowtimes(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (selectedShowDate) {
+      fetchShowtimesByDateId(selectedShowDate.id);
+    }
+  }, [selectedShowDate]);
+
+  const isDuplicateShowDate = (formattedDate) => {
+    return showDates.some((showDate) => showDate.movieId === selectedMovie.id && showDate.date === formattedDate);
+  };
+
+  const isDuplicateShowtime = () => {
+    return showtimes.some(
+      (showtime) =>
+        showtime.dateId === selectedShowDate.id &&
+        showtime.time === newTime &&
+        showtime.roomId === selectedRoom.id
     );
+  };
 
-    if (!showDate) {
-      try {
-        const [day, month, year] = newDate.split("-").map(Number);
-        const formattedDate = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-        const response = await fetch("http://localhost:9999/showdates", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ movieId: selectedMovie.id, date: formattedDate }),
-        });
-        if (!response.ok) throw new Error("Failed to add new showdate");
+  const handleAddShowDate = async () => {
+    if (!selectedMovie || !newDate) return;
 
-        showDate = await response.json();
-        setShowDates([...showDates, showDate]);
-      } catch (error) {
-        console.log(error);
+    try {
+      const formattedDate = new Date(newDate).toLocaleDateString("en-GB").split("/").join("-");
+
+      if (isDuplicateShowDate(formattedDate)) {
+        toast.error("Show Date already exists for the selected movie.");
         return;
       }
+
+      const response = await fetch("http://localhost:9999/showdates", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ movieId: selectedMovie.id, date: formattedDate }),
+      });
+      if (!response.ok) throw new Error("Failed to add new show date");
+
+      const newShowDate = await response.json();
+      setShowDates([...showDates, newShowDate]);
+      toast.success("Show Date added successfully!");
+    } catch (error) {
+      console.log(error);
     }
 
-    const existingShowtime = showtimes.find(
-      (showtime) => showtime.dateId === showDate.id && showtime.time === newTime
-    );
-    if (existingShowtime) {
-      toast.error("Showtime already exists for the selected showdate.");
+    setNewDate("");
+  };
+
+  const handleAddTime = async () => {
+    if (!selectedShowDate || !newTime || !selectedRoom) return;
+
+    if (isDuplicateShowtime()) {
+      toast.error("Showtime already exists for the selected showdate and room.");
       return;
     }
 
@@ -129,63 +216,40 @@ export default function CRUDShowTimes() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ dateId: showDate.id, time: newTime }),
+        body: JSON.stringify({
+          dateId: selectedShowDate.id,
+          time: newTime,
+          roomId: selectedRoom.id,
+        }),
       });
       if (!response.ok) throw new Error("Failed to add new showtime");
 
       const newShowtime = await response.json();
       setShowtimes([...showtimes, newShowtime]);
+      toast.success("Showtime added successfully!");
     } catch (error) {
       console.log(error);
     }
 
     setNewTime("");
+    setSelectedRoom(null);
   };
-
-  // Lọc danh sách phim theo loại (Phim Đang Chiếu hoặc Phim Sắp Chiếu)
-  const filteredMovies = movies.filter((movie) => {
-    const [day, month, year] = movie.releaseDate.split("-").map(Number);
-    const releaseDate = new Date(year, month - 1, day);
-    const currentDate = new Date();
-
-    if (currentTab === "nowShowing") {
-      return releaseDate <= currentDate;
-    } else {
-      return releaseDate > currentDate;
-    }
+  showtimes.sort((a, b) => {
+    if (a.time < b.time) return -1;
+    if (a.time > b.time) return 1;
+    if (a.roomId < b.roomId) return -1;
+    if (a.roomId > b.roomId) return 1;
+    return 0;
   });
-
-  const groupShowtimesByDate = (showtimes) => {
-    return showtimes.reduce((grouped, showtime) => {
-      const date = showDates.find((showDate) => showDate.id === showtime.dateId).date;
-      if (grouped[date]) {
-        grouped[date].push(showtime);
-      } else {
-        grouped[date] = [showtime];
-      }
-      return grouped;
-    }, {});
-  };
 
   return (
     <div className="main">
       <div className="movie-select">
         <div className="movie-select-top my-3">
           <Container className="text-center">
-            <Button
-              variant="primary"
-              onClick={() => setCurrentTab("nowShowing")}
-              className={currentTab === "nowShowing" ? "active" : ""}
-            >
-              Now Showing
-            </Button>{" "}
-            <Button
-              variant="primary"
-              onClick={() => setCurrentTab("comingSoon")}
-              className={currentTab === "comingSoon" ? "active" : ""}
-            >
-              Coming Soon
-            </Button>
+            <InputGroup>
+              <Form.Control type="text" placeholder="Search by movie title" value={searchQuery} onChange={handleSearch} />
+            </InputGroup>
           </Container>
         </div>
         <div className="movie-select-main">
@@ -212,50 +276,128 @@ export default function CRUDShowTimes() {
         <Modal.Body>
           <Form>
             <Form.Group>
-              <Form.Label>Date</Form.Label>
-              <Form.Control type="date" value={newDate} onChange={(e) => setNewDate(e.target.value)} />
+              <Form.Label>Add Show Date</Form.Label>
+              <Row>
+                <Col>
+                  <Form.Control type="date" value={newDate} onChange={(e) => setNewDate(e.target.value)} />
+                </Col>
+                <Col>
+                  <Button onClick={handleAddShowDate}>Add Show Date</Button>
+                </Col>
+              </Row>
             </Form.Group>
-            <Form.Group>
-              <Form.Label>Time</Form.Label>
-              <Form.Control type="time" value={newTime} onChange={(e) => setNewTime(e.target.value)} />
-            </Form.Group>
-            <Button className="my-2" onClick={handleAddTime}>
-              Add time
-            </Button>
-          </Form>
-          {selectedMovie &&
-            Object.entries(groupShowtimesByDate(showtimes.filter((showtime) => showDates.find((showDate) => showDate.id === showtime.dateId && showDate.movieId === selectedMovie.id))))
-              .sort((a, b) => {
-                const dateA = a[0].split("-").reverse().join("");
-                const dateB = b[0].split("-").reverse().join("");
-                return dateA.localeCompare(dateB);
-              })
-              .map(([date, dateShowtimes]) => (
-                <div key={date}>
-                  <h5>{date}</h5>
-                  {dateShowtimes.map((showtime) => (
-                    <Form.Group key={showtime.id}>
-                      {editedShowtime?.showtimeId === showtime.id ? (
-                        <>
-                          <Form.Control type="time" value={editedShowtime?.newTime} onChange={(e) => handleShowtimeChange(showtime.id, e.target.value)} />
-                          <Button onClick={handleSaveTime}>Save</Button>
-                          <Button onClick={() => setEditedShowtime(null)}>Cancel</Button>
-                        </>
-                      ) : (
-                        <>
-                          <Form.Label>{showtime.time}</Form.Label>
-                          <Button variant="success" className="mx-2 my-2" onClick={() => handleShowtimeChange(showtime.id, showtime.time)}>
-                            Edit
-                          </Button>
-                          <Button variant="danger" onClick={() => handleDeleteTime(showtime.id)}>
-                            Delete
-                          </Button>
-                        </>
-                      )}
+            {selectedMovie && (
+              <>
+                <Form.Group>
+                  <Form.Label>Select Show Date</Form.Label>
+                  <Form.Control as="select" value={selectedShowDate?.id} onChange={(e) => handleDateSelect(Number(e.target.value))}>
+                    <option value="">Select Show Date</option>
+                    {showDates
+                      .filter((showDate) => showDate.movieId === selectedMovie.id)
+                      .map((showDate) => (
+                        <option key={showDate.id} value={showDate.id}>
+                          {showDate.date}
+                        </option>
+                      ))}
+                  </Form.Control>
+                </Form.Group>
+                {selectedShowDate && (
+                  <>
+                    <Form.Label>Time</Form.Label>
+                    {showtimes.map((showtime) => {
+                      const room = rooms.find((room) => room.id === showtime.roomId);
+
+                      return (
+                        <Form.Group key={showtime.id}>
+                          {editedShowtime?.showtimeId === showtime.id ? (
+                            <>
+                              <Row>
+                              <Col>
+                                <Form.Control
+                                  type="time"
+                                  value={editedShowtime?.newTime}
+                                  onChange={(e) => handleShowtimeChange(showtime.id, e.target.value, showtime.roomId, showtime.dateId)}
+                                />
+                              </Col>
+                              <Col>
+                                <Form.Control
+                                  as="select"
+                                  value={editedShowtime?.newRoomId}
+                                  onChange={(e) => handleShowtimeChange(showtime.id, showtime.time, Number(e.target.value), showtime.dateId)}
+                                >
+                                  <option value="">Select Room</option>
+                                  {rooms.map((room) => (
+                                    <option key={room.id} value={room.id}>
+                                      {room.roomName}
+                                    </option>
+                                  ))}
+                                </Form.Control>
+                              </Col>
+                              <Col>
+                                  <Button onClick={handleSaveTime}>Save</Button>
+                                  <Button onClick={() => setEditedShowtime(null)}>Cancel</Button>
+                                </Col>
+                              </Row>
+                            </>
+                          ) : (
+                            <>
+                              <Row>
+                                <Col xs={3} className="text-center mt-2">
+                                  <span>{showtime.time}</span>
+                                </Col>
+                                <Col xs={3} className="text-center mt-2">
+                                  {room ? (
+                                    <span>{room.roomName}</span>
+                                  ) : (
+                                    <span>No room assigned</span>
+                                  )}
+                                </Col>
+                                <Col xs={6}>
+                                <Button
+                                  variant="success"
+                                  className="mx-2 my-2"
+                                  onClick={() => handleShowtimeChange(showtime.id, showtime.time, showtime.roomId, showtime.dateId)}
+                                >
+                                  Edit
+                                </Button>
+
+
+                                <Button variant="danger" onClick={() => handleDeleteTime(showtime.id)}>
+                                    Delete
+                                  </Button>
+                                </Col>
+                              </Row>
+                            </>
+                          )}
+                        </Form.Group>
+                      );
+                    })}
+                    <Form.Group>
+                      <Form.Label>Add Show Time</Form.Label>
+                      <Row>
+                        <Col>
+                          <Form.Control type="time" value={newTime} onChange={(e) => setNewTime(e.target.value)} />
+                        </Col>
+                        <Col>
+                          <Form.Control as="select" value={selectedRoom?.id} onChange={(e) => setSelectedRoom(rooms.find((room) => room.id === Number(e.target.value)))}>
+                            <option value="">Select Room</option>
+                            {rooms.map((room) => (
+                              <option key={room.id} value={room.id}>
+                                {room.roomName}
+                              </option>
+                            ))}
+                          </Form.Control>
+                        </Col>
+                        <Col>
+                          <Button onClick={handleAddTime}>Add Time</Button>
+                        </Col>
+                      </Row>
                     </Form.Group>
-                  ))}
-                </div>
-              ))}
+                  </>
+                )}
+              </>
+            )}
+          </Form>
         </Modal.Body>
       </Modal>
       <ToastContainer />

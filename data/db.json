@@ -203,10 +203,10 @@
   ],
   "showtimes": [
     {
-      "id": 1,
-      "dateId": 1,
+      "time": "14:22",
       "roomId": 1,
-      "time": "14:00"
+      "dateId": 1,
+      "id": 1
     },
     {
       "id": 2,
@@ -321,6 +321,18 @@
       "dateId": 10,
       "roomId": 1,
       "time": "15:00"
+    },
+    {
+      "dateId": 1,
+      "time": "16:00",
+      "roomId": 1,
+      "id": 22
+    },
+    {
+      "dateId": 1,
+      "time": "14:22",
+      "roomId": 2,
+      "id": 23
     }
   ],
   "movies": [
