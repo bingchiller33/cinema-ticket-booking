@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row, Table } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import DefaultTemplate from "../templates/DefaultTemplate";
 import '../styles/booking.css'
 import { FileEarmark, FileEarmarkExcelFill } from "react-bootstrap-icons";
 import { toast } from "react-toastify";
+import { FileEarmarkFill } from "react-bootstrap-icons/dist";
 
 const BookingScreen = () => {
+    const navigate = useNavigate('')
     const { mid } = useParams()
     const [showDate, setShowDate] = useState([])
     const [showTimes, setShowTimes] = useState([])
@@ -17,11 +19,15 @@ const BookingScreen = () => {
     const [movie, setMovie] = useState({})
     const [date, setDate] = useState('')
     const customer = JSON.parse(localStorage.getItem('customer'))
+    if (customer === null) {
+        localStorage.setItem('login_yet', 'login_yet')
+        navigate('/login')
+    }
     useEffect(() => {
         fetch('http://localhost:9999/showdates?movieId=' + mid)
             .then(res => res.json())
             .then(data => setShowDate(data))
-    }, [])
+    }, [mid])
     useEffect(() => {
         setCheckseats([])
         fetch('http://localhost:9999/seats?roomId=' + time.roomId)
@@ -31,7 +37,7 @@ const BookingScreen = () => {
     useEffect(() => {
         setTime('')
         setCheckseats([])
-        fetch('http://localhost:9999/showtimes?dateId=' + date)
+        fetch('http://localhost:9999/showtimes?dateId=' + date.id)
             .then(res => res.json())
             .then(data => setShowTimes(data))
     }, [date])
@@ -44,10 +50,10 @@ const BookingScreen = () => {
         fetch('http://localhost:9999/movies/' + mid)
             .then(res => res.json())
             .then(data => setMovie(data))
-    }, [])
+    }, [mid])
     tickets.map(ticket => {
-        showTimes.map(showTime => {
-            seats.map(seat => {
+        return showTimes.map(showTime => {
+            return seats.map(seat => {
                 if (ticket.seatId === seat.id && showTime.roomId === ticket.roomId && time.id === ticket.showtimesId) {
                     seat.booked = 'booked'
                 }
@@ -66,15 +72,14 @@ const BookingScreen = () => {
             }
         })
         return current
-    }, 0)
-    console.log(total);
+    }, 0) 
     const handleOnchangeSeats = (e, id) => {
         let check = e.target.checked;
         let newState = [];
         if (check) {
             setCheckseats([...checkSeats, id])
             newState = seats.map(seat => {
-                if (seat.id == id) {
+                if (seat.id === id) {
                     seat.status = 'unavailable';
                 }
                 return seat;
@@ -82,7 +87,7 @@ const BookingScreen = () => {
         } else {
             setCheckseats(checkSeats.filter(checkSeat => checkSeat !== id))
             newState = seats.map(seat => {
-                if (seat.id == id) {
+                if (seat.id === id) {
                     seat.status = 'available';
                 }
                 return seat;
@@ -109,21 +114,16 @@ const BookingScreen = () => {
                     customerId: customer.id,
                     movieId: parseInt(mid),
                     roomId: time.roomId,
-                    seatId: seat,
+                    seatId: seat, 
                     showDateId: date,
                     showtimesId: time.id
                 }
-                // console.log(ticket);
-                fetch('http://localhost:9999/tickets', {
-                    method: 'POST',
-                    body: JSON.stringify(ticket),
-                    headers: {
-                        'Content-type': 'application/json; charset=UTF-8',
-                    }
-                })
+                    sessionStorage.setItem('checkSeats', JSON.stringify(checkSeats))
+                    sessionStorage.setItem('time', JSON.stringify(time))
+                    sessionStorage.setItem('date', JSON.stringify(date))
+                    navigate(`/viewticket/${mid}`) 
             })
         }
-
     }
     return (
         <DefaultTemplate>
@@ -132,7 +132,7 @@ const BookingScreen = () => {
                     <Col xs={12} className={'pt-3 pb-3 container_date border-4 border-black border-top border-bottom'}>
                         {
                             showDate.map(s => (
-                                <p key={s.id} className={s.id === date ? 'data_date border_active' : 'data_date'} onClick={(e) => setDate(s.id)}>{s.date}</p>
+                                <p key={s.id} className={s.id === date.id ? 'data_date border_active' : 'data_date'} onClick={(e) => setDate(s)}>{s.date}</p>
                             ))
                         }
                     </Col>
@@ -169,7 +169,7 @@ const BookingScreen = () => {
                                     <>
                                         <Form.Label htmlFor={s.id}>
                                             {s.status === 'available' && s.booked === 'book' ? s.class === 'Economy'
-                                                ? <FileEarmark size={40} title={s.row_id + s.seat_number} /> : <FileEarmarkExcelFill size={40} color={'gold'} title={s.row_id + s.seat_number} />
+                                                ? <FileEarmark size={40} title={s.row_id + s.seat_number} /> : <FileEarmarkFill size={40} color={'gold'} title={s.row_id + s.seat_number} />
                                                 : <FileEarmarkExcelFill size={40} color={s.booked === 'book' ? 'black' : 'gray'} title={s.row_id + s.seat_number} />}
                                             <Form.Check id={s.id}
                                                 disabled={s.booked === 'booked' ? true : false}
@@ -201,6 +201,16 @@ const BookingScreen = () => {
                         </ul>
                     </Col>
                 </Row>
+                <Row className={seats.length === 0 ? "d-none" : "pb-3 d-flex justify-content-center"}>
+                    <Col xs={6}>
+                        <ul className="d-flex justify-content-center list_signature">
+                            <li className="signature_item"><FileEarmark size={40} /> Empty</li>
+                            <li className="signature_item"><FileEarmarkExcelFill size={40} color={'gray'} /> Unavailable</li>
+                            <li className="signature_item"><FileEarmarkFill size={40} color={'gold'} /> VIP</li>
+                            <li className="signature_item"><FileEarmarkExcelFill size={40} color={'black'} /> Your choice</li>
+                        </ul>
+                    </Col>
+                </Row>
                 <Row className={'d-flex justify-content-center'}>
                     <Col xs={6} >
                         <Table>
@@ -214,7 +224,7 @@ const BookingScreen = () => {
                                     <td>Total price</td>
                                     <td>:</td>
                                     <td className="d-flex justify-content-end">
-                                       {total}$
+                                        {total}$
                                     </td>
                                 </tr>
                             </tbody>

@@ -26,121 +26,54 @@
   ],
   "tickets": [
     {
-      "customerId": 1,
-      "movieId": 1,
+      "customerId": 2,
+      "movieId": 2,
       "roomId": 1,
-      "seatId": 1,
-      "showDateId": 1,
-      "showtimesId": 1,
+      "seatId": 15,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "price": 125,
       "id": 1
     },
     {
       "customerId": 2,
       "movieId": 2,
       "roomId": 1,
-      "seatId": 5,
-      "showDateId": 2,
-      "showtimesId": 3,
+      "seatId": 55,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "price": 120,
       "id": 2
     },
     {
       "customerId": 2,
       "movieId": 2,
       "roomId": 1,
-      "seatId": 14,
-      "showDateId": 2,
-      "showtimesId": 3,
+      "seatId": 48,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "price": 120,
       "id": 3
     },
     {
       "customerId": 2,
       "movieId": 2,
       "roomId": 1,
-      "seatId": 25,
-      "showDateId": 2,
-      "showtimesId": 3,
+      "seatId": 38,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "price": 120,
       "id": 4
     },
     {
       "customerId": 2,
       "movieId": 2,
       "roomId": 1,
-      "seatId": 17,
+      "seatId": 32,
       "showDateId": 4,
       "showtimesId": 7,
+      "price": 120,
       "id": 5
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 6,
-      "showDateId": 4,
-      "showtimesId": 7,
-      "id": 6
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 16,
-      "showDateId": 8,
-      "showtimesId": 16,
-      "id": 7
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 8
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 9
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 10
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 11
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 12
-    },
-    {
-      "customerId": 2,
-      "movieId": 2,
-      "roomId": 1,
-      "seatId": 26,
-      "showDateId": 2,
-      "showtimesId": 7,
-      "id": 13
     }
   ],
   "admins": [
@@ -269,12 +202,6 @@
       "time": "14:00"
     },
     {
-      "id": 12,
-      "dateId": 6,
-      "roomId": 1,
-      "time": "15:00"
-    },
-    {
       "id": 13,
       "dateId": 7,
       "roomId": 1,
@@ -337,6 +264,154 @@
   ],
   "movies": [
     {
+<<<<<<< HEAD
+      "id": 7,
+      "name": "MISSION: IMPOSSIBLE DEAD RECKONING PART ONE",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277294/movie/MISSION:%20IMPOSSIBLE%20DEAD%20RECKONING%20PART%20ONE.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277609/banner/MISSION:%20IMPOSSIBLE%20DEAD%20RECKONING%20PART%20ONE.jpg",
+      "actor": "Tom Cruise, Rebecca Ferguson, Vanessa Kirby",
+      "director": "Christopher McQuarrie",
+      "date": "2023-08-07",
+      "duration": "164 ",
+      "category": [
+        "Science Fiction",
+        "Romantic Drama",
+        "Sports",
+        "Courtroom Drama"
+      ],
+      "description": "The 7th part of the Mission Impossible series",
+      "trailer": "https://www.youtube.com/embed/AX7lnd9w_yc",
+      "priceticket": "5,5$"
+    },
+    {
+      "id": 8,
+      "name": "Spider-Man: Across the Spider-Verse ",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280003/movie/Spider-Man:%20Across%20the%20Spider-Verse.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689279897/banner/Spider-Man:%20Across%20the%20Spider-Verse.jpg",
+      "actor": "Spider Man",
+      "director": "Joaquim Dos Santos",
+      "date": "2023-08-07",
+      "duration": "170",
+      "category": [
+        "Animated",
+        "Fantasy",
+        "Science Fiction"
+      ],
+      "description": "Miles Morales returns for the next chapter of the Oscar®",
+      "trailer": "https://www.youtube.com/embed/SUz8Aw28vrc",
+      "priceticket": "5$",
+      "views": 0
+    },
+    {
+      "id": 9,
+      "name": "Doraemon The Movie: Nobita's Sky Utopia",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280003/movie/Doraemon%20The%20Movie:%20Nobita%27s%20Sky%20Utopia.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689279897/banner/Doraemon%20The%20Movie:%20Nobita%27s%20Sky%20Utopia.jpg",
+      "actor": "Nobita",
+      "director": "Doyama Takumi",
+      "date": "2023-10-07",
+      "duration": "150",
+      "category": [
+        "Fantasy",
+        "Animated"
+      ],
+      "description": "Doraemon The Movie: Nobita’s Sky Utopia 2023 is about when Nobita finds a crescent-shaped island in the sky",
+      "trailer": "https://www.youtube.com/embed/SthaOnp5uDs",
+      "priceticket": "5$",
+      "views": 0
+    },
+    {
+      "id": 10,
+      "name": "ELEMENTAL",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277294/movie/ELEMENTAL.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689279897/banner/ELEMENTAL.jpg",
+      "actor": "Mamoudou Athie",
+      "director": "Peter Sohn",
+      "date": "2023-05-07",
+      "duration": "105",
+      "category": [
+        "Animated",
+        "Fantasy",
+        "Romantic Drama"
+      ],
+      "description": "Follows Ember and Wade, in a city where fire-, water-, land- and air-residents live together.",
+      "trailer": "https://www.youtube.com/embed/8qTBWDKtyYU",
+      "priceticket": "4,5$",
+      "views": 0
+    },
+    {
+      "id": 11,
+      "name": "ANT-MAN AND THE WASP: QUANTUMANIA",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280193/movie/ANT-MAN%20AND%20THE%20WASP:%20QUANTUMANIA.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280898/banner/ANT-MAN%20AND%20THE%20WASP:%20QUANTUMANIA.jpg",
+      "actor": "  Paul Rudd, Michelle Pfeiffer, Evangeline Lilly, Kathryn Newton, Bill Murray, Michael Douglas",
+      "director": "Marvel Studios",
+      "date": "2023-09-07",
+      "duration": "124",
+      "category": [
+        "Fantasy",
+        "Science Fiction",
+        "Epic",
+        "Mystery"
+      ],
+      "description": "Marvel continues to release the third part Ant-Man and the Wasp: Quantumania in the context of the quantum world.",
+      "trailer": "https://www.youtube.com/embed/y-xnXBXtanU",
+      "priceticket": "6$",
+      "views": 0
+    },
+    {
+      "id": 12,
+      "name": "THÁM TỬ LỪNG DANH CONAN: TÀU NGẦM SẮT MÀU ĐEN",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280004/movie/TH%C3%81M%20T%E1%BB%AC%20L%E1%BB%AANG%20DANH%20CONAN:%20T%C3%80U%20NG%E1%BA%A6M%20S%E1%BA%AET%20M%C3%80U%20%C4%90EN.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277610/banner/TH%C3%81M%20T%E1%BB%AC%20L%E1%BB%AANG%20DANH%20CONAN:%20T%C3%80U%20NG%E1%BA%A6M%20S%E1%BA%AET%20M%C3%80U%20%C4%90EN.png",
+      "actor": "Conan",
+      "director": "Yuzuru Tachikawa",
+      "date": "2023-12-07",
+      "duration": "110 ",
+      "category": [
+        "Animated",
+        "Fantasy"
+      ],
+      "description": "Many engineers from around the world gather at the Interpol marine facility \"Pacific Buoy\"",
+      "trailer": "https://www.youtube.com/embed/NwnQI9izPFc",
+      "priceticket": "5$",
+      "views": 0
+    },
+    {
+      "id": 13,
+      "name": "RALLY ROAD RACERS",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689281352/movie/RALLY%20ROAD%20RACERS.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277609/banner/RALLY%20ROAD%20RACERS.jpg",
+      "actor": "Sharon Horgan, Chloe Bennet",
+      "director": "Ross Venokur",
+      "date": "2023-07-07",
+      "duration": "103",
+      "category": [
+        "Animated",
+        "Fantasy"
+      ],
+      "description": "Zhi, a rookie race car driver, gets the opportunity to compete against the reigning champion of the rally car circuit",
+      "trailer": "https://www.youtube.com/embed/aCSuCI2Wn8I",
+      "priceticket": "3$",
+      "views": 0
+    },
+    {
+      "id": 14,
+      "name": "INSIDIOUS: THE RED DOOR",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689281351/movie/INSIDIOUS:%20THE%20RED%20DOOR.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277609/banner/INSIDIOUS:%20THE%20RED%20DOOR.jpg",
+      "actor": "Ty Simpkins, Patrick Wilson",
+      "director": " Patrick Wilson",
+      "date": "2023-08-07",
+      "duration": "125",
+      "category": [
+        "Romantic Drama",
+        "Mystery"
+      ],
+      "description": "In Insidious: The Red Door, the horror franchise’s original cast returns for the final chapter of the Lambert family’s terrifying saga",
+      "trailer": "https://www.youtube.com/embed/VJyx2KZ-ILc",
+      "priceticket": "4$"
+=======
       "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--3_1688111575146.jpg",
       "price": 120,
       "movieImage": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--1_1688111521392.jpg",
@@ -407,13 +482,14 @@
       "duration": 105,
       "category": "Anime, Family, Adventure",
       "releaseDate": "26-09-2023"
+>>>>>>> 10326a13800c80d1d1e04ac1b6d559783008c94d
     }
   ],
   "discounts": [
     {
       "offerId": 1,
       "price": 5.99,
-      "movieName": "The Avengers"
+      "name": "The Avengers"
     }
   ],
   "theatres": [

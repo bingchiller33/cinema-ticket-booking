@@ -1,10 +1,43 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+import { Col, Image, Row } from 'react-bootstrap'
+
+const MoviesScreen = () => {
+  const [movie, setMovie] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8889/movies")
+      .then((resp) => resp.json())
+      .then((data) => {
+        setMovie(data);
+      });
+  }, []);
+
+  return (
+    <Row>
+      <Col md={10} className='container' style={{ margin: '0 auto' }}>
+        <Row>
+          {
+            movie.map(m => (
+              <Col md={2}>
+                <Row><Image src={m.movieImage} alt='movies' ></Image></Row>
+                <Row>Name : {m.movieName}</Row>
+                <Row>Actor : {m.actor}</Row>
+                <Row>Director : {m.director}</Row>
+                <Row>ReleaseDate : {m.releaseDate}</Row>
+              </Col>
+
+            ))
+          }
+        </Row>
+      </Col>
+    </Row>
+=======
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/movies.css'
 import DefaultTemplate from '../templates/DefaultTemplate';
-const MoviesScreen = () => {
-  const navigate = useNavigate()
+const MoviesScreen = () => { 
   const [movie, setMovie] = useState([])
   const [status, setStatus] = useState('All')
   const [searchMovie, setSearchMovie] = useState('')
@@ -95,6 +128,7 @@ const MoviesScreen = () => {
         </Row>
       </Container>
     </DefaultTemplate>
+>>>>>>> 10326a13800c80d1d1e04ac1b6d559783008c94d
   );
 };
 
