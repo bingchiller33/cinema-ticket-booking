@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Card, Carousel, Col, Row } from "react-bootstrap";
-import "../../styles/carousel.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "../../styles/carousel.css";
 
 const CarouselComponent = () => {
   const [movies, setMovies] = useState([]);
@@ -29,7 +29,7 @@ const CarouselComponent = () => {
       pause="hover"
       className="card-slider"
       controls={false}
-      indicators={false}
+      indicators={true}
     >
       {movies.map((card) => (
         <Carousel.Item key={card.movieId}>
@@ -38,34 +38,30 @@ const CarouselComponent = () => {
               variant="top"
               src={card.movieBanner}
               alt="Card Image"
-              style={{ height: "600px" }}
+              className="img-fluid"
             />
             <Card.Body>
               <Row>
-                <Col xs={8}>
+                <Col xs={12} sm={8}>
                   <Row>
-                    <Col xs={4}>
+                    <Col xs={12} sm={4}>
                       <Card.Title>Title</Card.Title>
                       <Card.Text>{card.movieName}</Card.Text>
                     </Col>
-                    <Col xs={2}>
+                    <Col xs={12} sm={4}>
                       <Card.Title>Release Date</Card.Title>
                       <Card.Text>{card.releaseDate}</Card.Text>
                     </Col>
-                    <Col xs={2}>
+                    <Col xs={12} sm={4}>
                       <Card.Title>Director</Card.Title>
                       <Card.Text>{card.director}</Card.Text>
                     </Col>
                   </Row>
                 </Col>
-                <Col xs={4}>
-                  <Row>
-                    <Col xs={12}>
-                      <Card.Text>
-                        <Link to="/movies">Click here for more details!</Link>
-                      </Card.Text>
-                    </Col>
-                  </Row>
+                <Col xs={12} sm={4}>
+                  <Card.Text>
+                    <Link to="/movies">Click here for more details!</Link>
+                  </Card.Text>
                 </Col>
               </Row>
             </Card.Body>
