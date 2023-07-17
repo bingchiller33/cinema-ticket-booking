@@ -43,6 +43,12 @@
 .screen_room_area {
     margin-left: 20px;
 }
+.signature_item {
+    width: 130px;
+}
+.btn_payment {
+    padding: 6px 30px !important;
+}
 
 .seat_options {
     text-align: -webkit-center;

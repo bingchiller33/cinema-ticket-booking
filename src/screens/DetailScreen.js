@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HandIndexThumb } from 'react-bootstrap-icons'
-import { Button, Col, Container, Form, Row, Table } from 'react-bootstrap';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Button, Col, Container, Row, Table } from 'react-bootstrap';
+import { useNavigate, useParams } from 'react-router-dom';
 import DefaultTemplate from '../templates/DefaultTemplate';
 import '../styles/detailMovie.css'
 const BookingScreen = () => {
@@ -14,7 +14,7 @@ const BookingScreen = () => {
     fetch('http://localhost:9999/movies/' + mid)
       .then(res => res.json())
       .then(data => setMovie(data))
-  }, [])
+  }, [mid])
   const handleClick = (e) => {
     setClick(e.target.innerText === "Detail" ? true : false)
   }
@@ -22,10 +22,15 @@ const BookingScreen = () => {
     fetch('http://localhost:9999/showdates?movieId=' + mid)
       .then(res => res.json())
       .then(data => setShowtime(data))
-  }, [])
+  }, [mid])
   const handleClickBuyTicket = (e) => {
-    if(showtime.length!==0){
-      navigate('/booking/'+mid)
+    if (JSON.parse(localStorage.getItem('customer')) === null) {
+      localStorage.setItem('login_yet', 'login_yet')
+      navigate('/login')
+    } else {
+      if (showtime.length !== 0) {
+        navigate('/booking/' + mid)
+      }
     }
   }
   return (
@@ -82,11 +87,15 @@ const BookingScreen = () => {
                             <td className='table_title_movie_detail'>ReleaseDate:</td>
                             <td>{movie.releaseDate}</td>
                           </tr>
+                          <tr className='table_movie_detail'>
+                            <td className='table_title_movie_detail'>Price:</td>
+                            <td>{movie.price}$</td>
+                          </tr>
                         </tbody>
                       </Table>
                     </Col>
                     <Col>
-                      <Button className={showtime.length===0?'d-none': 'btn-danger'}  onClick={(e) => handleClickBuyTicket(e)}>Buy Ticket</Button>
+                      <Button className={showtime.length === 0 ? 'd-none' : 'btn-danger'} onClick={(e) => handleClickBuyTicket(e)}>Buy Ticket</Button>
                     </Col>
                   </Row>
                 </Col>

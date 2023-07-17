@@ -39,7 +39,7 @@ function Login() {
     const [customer, setCustomer] = useState({})
     const [rem, setRem] = useState(true)
     if (localStorage.getItem('register_success')) {
-        toast.success('You have successfully registered, please login to continue buying tickets')
+        toast.success('You have successfully registered, please login to continue buying tickets.')
         localStorage.removeItem('register_success')
     }
     const validateForm = (parentElement, e) => {
@@ -156,6 +156,10 @@ function Login() {
             localStorage.setItem('login_success', 'login_success')
             navigate('/')
         }
+    }
+    if(localStorage.getItem('login_yet')!==null){
+        toast.warn('Please login to continue buying tickets.')
+        localStorage.removeItem('login_yet')
     }
     return (
         <Container className='mt-5 pt-2' >
