@@ -1,0 +1,53 @@
+.data_date {  
+    width: 120px;
+    background-color: rgb(186, 186, 186);
+    padding: 10px 12px;
+    text-align: center; 
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.data_date:hover { 
+    opacity: .8;
+}
+.border_active { 
+    background-color: red;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #fff;
+}
+.container_date {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.list_number_seats, .list_character_seats {
+    padding: 0;
+}
+.list_number_seats {
+    padding-left: 24px;
+}
+.list_number_seats_item {
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.list_character_seats_item { 
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 0;
+    margin-bottom: 8px;
+}
+.screen_room_area {
+    margin-left: 20px;
+}
+
+.seat_options {
+    text-align: -webkit-center;
+}
+
+.seat_info {
+    text-align: center;
+}

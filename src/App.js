@@ -6,15 +6,14 @@ import "react-toastify/dist/ReactToastify.css";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
 import BookingScreen from "./screens/BookingScreen";
+import ProtectedRoute from "./components/common/ProtectedRoute";
 import ManageShowtimes from "./screens/ManageShowtimes";
-
+import ManageSeat from "./screens/ManageSeat";
 
 function App() {
-  const options = {
-    // passing the client secret obtained from the server
-    clientSecret: "{{CLIENT_SECRET}}",
-  };
   const loginTime = localStorage.getItem("loginTime");
+
+  const userData = JSON.parse(localStorage.getItem("customer"));
 
   if (loginTime) {
     const currentTime = new Date().getTime();
@@ -29,17 +28,31 @@ function App() {
     localStorage.removeItem("customer");
   }
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/movies" element={<MoviesScreen />} />
-          <Route path="/booking/:mid" element={<BookingScreen />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/movies" element={<MoviesScreen />} />
+        <Route path="/booking/:mid" element={<BookingScreen />} />
+        <Route
+          element={<ProtectedRoute redirectPath="/" isAllowed={!userData} />}
+        >
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/detail/:mid" element={<DetailScreen />} />
-          <Route path="/showtimes" element={<ManageShowtimes />} />
-        </Routes>
-      </BrowserRouter>
+        </Route>
+        <Route path="/detail/:mid" element={<DetailScreen />} />
+        <Route
+          element={
+            <ProtectedRoute
+              redirectPath="/"
+              isAllowed={!!userData && userData.role === 3}
+            />
+          }
+        >
+          <Route element={<ManageSeat />} path="/manageseats"></Route>
+          <Route element={<ManageShowtimes />} path="/showtimes"></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

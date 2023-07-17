@@ -18,6 +18,10 @@
     margin: 0 10px;
 }
 
+.slick-slider {
+    padding: 20px;
+}
+
 .slick-list {
     margin: 0 -10px;
 }
@@ -52,7 +56,11 @@
     color: black !important;
 }
 
-.slick-prev,
-.slick-next {
-  color: red !important;
+.slick-next:before, .slick-prev:before {
+    color: red;
+    font-size: 50px;
+}
+
+.slick-prev {
+    left: -50px;
 }

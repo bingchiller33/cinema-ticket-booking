@@ -4,6 +4,8 @@
     color: white;
 }
 
+
+
 .footer ul {
     list-style-type: none;
     padding: 0;
@@ -60,6 +62,6 @@
 
 }
 
-.footer_watermark p{
+.footer_watermark p {
     margin-bottom: 0px;
 }

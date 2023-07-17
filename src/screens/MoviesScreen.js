@@ -18,7 +18,8 @@ const MoviesScreen = () => {
       .then(res => res.json())
       .then(data => setMovie(data.filter(d => {
         let date1 = new Date(currentTime)
-        let date2 = new Date(d.releaseDate)
+        let date = d.releaseDate.split('-')
+        let date2 = new Date(`${date[2]}-${date[1]}-${date[0]}`)
         if (status === 'Movie is playing') {
           return date2.getTime() < date1.getTime() && d.movieName.toLowerCase().startsWith(searchMovie.toLowerCase())
         } else if (status === 'Movie coming soon') {
@@ -27,7 +28,7 @@ const MoviesScreen = () => {
         return true && d.movieName.toLowerCase().startsWith(searchMovie.toLowerCase())
       })
       ))
-  }, [status, searchMovie])
+  }, [status, searchMovie])   
   const handleOnchangeSelect = (e) => {
     setStatus(e.target.value)
   }
@@ -79,7 +80,7 @@ const MoviesScreen = () => {
                           <Row className='pt-2 pb-4'>
                             <Col xs={12} className='text-center d-flex justify-content-around position-absolute' >
                               <Button><Link className='movie_detail_link' to={'/detail/' + m.id}>View Detail</Link></Button>
-                              <Button className={'btn-danger'}><Link className='movie_detail_link' to={'/booking/' + m.id}>Buy Ticket</Link></Button>
+                              {/* <Button className={'btn-danger'}><Link className='movie_detail_link' to={'/booking/' + m.id}>Buy Ticket</Link></Button> */}
                             </Col>
                           </Row>
                         </Container>

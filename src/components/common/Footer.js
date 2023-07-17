@@ -7,7 +7,7 @@ import { Facebook, Instagram, Youtube } from "react-bootstrap-icons";
 const Footer = () => {
   return (
     <footer className="footer">
-      <Container>
+       <Container className="footer_container">
         <Row>
           <Col lg={3} xs={6}>
             <ul>

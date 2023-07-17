@@ -32,7 +32,7 @@ const CarouselComponent = () => {
       indicators={true}
     >
       {movies.map((card) => (
-        <Carousel.Item key={card.movieId}>
+        <Carousel.Item key={card.id} >
           <Card className="carousel-card">
             <Card.Img
               variant="top"
@@ -60,7 +60,7 @@ const CarouselComponent = () => {
                 </Col>
                 <Col xs={12} sm={4}>
                   <Card.Text>
-                    <Link to="/movies">Click here for more details!</Link>
+                    <Link to={"/detail/"+ card.id}>Click here for more details!</Link>
                   </Card.Text>
                 </Col>
               </Row>

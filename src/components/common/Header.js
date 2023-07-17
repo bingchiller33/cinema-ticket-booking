@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import "../../styles/Header.css";
+
 const Header = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Check if user is logged in by retrieving data from localStorage
+    const userData = localStorage.getItem("customer");
+    if (userData) {
+      setLoggedIn(true);
+      setUser(JSON.parse(userData));
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("customer");
+    setLoggedIn(false);
+    setUser(null);
+  };
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -15,10 +34,8 @@ const Header = () => {
           />
         </Navbar.Brand>
 
-        {/* Responsive Navbar Toggle */}
         <Navbar.Toggle aria-controls="navbar-nav" />
 
-        {/* Navbar Links */}
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ml-auto">
             <NavLink
@@ -39,18 +56,51 @@ const Header = () => {
             >
               Poster
             </NavLink>
-            {/* Logo */}
-            {/* Add more links as needed */}
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Collapse style={{ justifyContent: 'right' }}>
-          <NavLink
-            to="/login"
-            className={({ isActive }) => (isActive ? "active-link" : "link")}
-          >
-            Login
-          </NavLink>
-        </Navbar.Collapse>
+
+        {loggedIn && user && (
+          <Navbar.Collapse style={{ justifyContent: "right" }}>
+            <Nav>
+              <NavDropdown title={user.username} id="user-dropdown">
+                {user.role === 3 && (
+                  <NavDropdown.Item>
+                    <Link
+                      to={"/showtimes"}
+                      style={{ textDecoration: "none", color: "#333" }}
+                    >
+                      Manage Showtimes
+                    </Link>
+                  </NavDropdown.Item>
+                )}
+                {user.role === 3 && (
+                  <NavDropdown.Item>
+                    <Link
+                      to={"/manageseats"}
+                      style={{ textDecoration: "none", color: "#333" }}
+                    >
+                      Manage Seats
+                    </Link>
+                  </NavDropdown.Item>
+                )}
+                <NavDropdown.Item onClick={handleLogout}>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        )}
+
+        {!loggedIn && (
+          <Navbar.Collapse style={{ justifyContent: "right" }}>
+            <NavLink
+              to="/login"
+              className={({ isActive }) => (isActive ? "active-link" : "link")}
+            >
+              Login
+            </NavLink>
+          </Navbar.Collapse>
+        )}
       </Container>
     </Navbar>
   );

@@ -5,7 +5,7 @@
       "email": "admin@gmail.com",
       "phoneNumber": "0375297014",
       "password": "6fc8c302d25b8d338b123e3dba6321086bbcf793e36a7d828d2a18ee8ad0af23",
-      "role": 1,
+      "role": 3,
       "id": 1
     },
     {
@@ -15,6 +15,22 @@
       "password": "26d9b0e9924f0b3d393dc68bbe59486719d3ef51854545a0bb056ef271ba6fba",
       "role": 1,
       "id": 2
+    },
+    {
+      "username": "Username",
+      "email": "user2@gmail.com",
+      "phoneNumber": "0375297015",
+      "password": "f4e98344541784f2eabcf6fcd1daf050afd9a1bfa2c59819356fe0543752f311",
+      "role": 3,
+      "id": 3
+    },
+    {
+      "username": "User bthg",
+      "email": "user3@gmail.com",
+      "phoneNumber": "0931741451",
+      "password": "f4e98344541784f2eabcf6fcd1daf050afd9a1bfa2c59819356fe0543752f311",
+      "role": 1,
+      "id": 4
     }
   ],
   "bookings": [
@@ -26,14 +42,256 @@
   ],
   "tickets": [
     {
-      "ticketId": 1,
-      "adminId": 1,
-      "ticketNumber": "T123456",
-      "hallId": 1,
-      "price": 10.99,
-      "seatNumber": "A1",
-      "showDate": "2023-06-20",
-      "showId": 1
+      "customerId": 1,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 1,
+      "showDateId": 1,
+      "showtimesId": 1,
+      "id": 1
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 5,
+      "showDateId": 2,
+      "showtimesId": 3,
+      "id": 2
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 14,
+      "showDateId": 2,
+      "showtimesId": 3,
+      "id": 3
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 25,
+      "showDateId": 2,
+      "showtimesId": 3,
+      "id": 4
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 17,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "id": 5
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 6,
+      "showDateId": 4,
+      "showtimesId": 7,
+      "id": 6
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 8,
+      "showtimesId": 16,
+      "id": 7
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 26,
+      "showDateId": 2,
+      "showtimesId": 7,
+      "id": 8
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 26,
+      "showDateId": 2,
+      "showtimesId": 7,
+      "id": 9
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 26,
+      "showDateId": 2,
+      "showtimesId": 7,
+      "id": 10
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 26,
+      "showDateId": 2,
+      "showtimesId": 7,
+      "id": 11
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 26,
+      "showDateId": 2,
+      "showtimesId": 7,
+      "id": 12
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 26,
+      "showDateId": 2,
+      "showtimesId": 7,
+      "id": 13
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 14
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 15
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 16
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 17
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 18
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 19
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 20
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 21
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 22
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 23
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 13,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 24
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 23,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 25
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 33,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 26
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 43,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 27
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 32,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 28
     }
   ],
   "admins": [
@@ -42,83 +300,184 @@
       "password": "admin123"
     }
   ],
-  "showtimes": [
+  "showdates": [
     {
       "id": 1,
       "movieId": 1,
-      "date": "2023-05-20",
-      "times": "14:00"
+      "date": "20-05-2023"
     },
     {
       "id": 2,
-      "movieId": 1,
-      "date": "2023-05-20",
-      "times": "15:00"
+      "movieId": 2,
+      "date": "20-05-2023"
     },
     {
       "id": 3,
       "movieId": 1,
-      "date": "2023-05-21",
-      "times": "14:00"
+      "date": "21-05-2023"
     },
     {
       "id": 4,
       "movieId": 2,
-      "date": "2023-05-20",
-      "times": "14:00"
+      "date": "21-05-2023"
     },
     {
       "id": 5,
-      "movieId": 2,
-      "date": "2023-05-20",
-      "times": "15:00"
+      "movieId": 3,
+      "date": "21-05-2023"
     },
     {
       "id": 6,
-      "movieId": 2,
-      "date": "2023-05-21",
-      "times": "14:00"
+      "movieId": 4,
+      "date": "21-05-2023"
     },
     {
       "id": 7,
-      "movieId": 3,
-      "date": "2023-05-20",
-      "times": "14:00"
+      "movieId": 1,
+      "date": "22-05-2023"
     },
     {
       "id": 8,
-      "movieId": 3,
-      "date": "2023-05-20",
-      "times": "15:00"
+      "movieId": 2,
+      "date": "22-05-2023"
     },
     {
       "id": 9,
       "movieId": 3,
-      "date": "2023-05-21",
-      "times": "14:00"
+      "date": "22-05-2023"
     },
     {
       "id": 10,
       "movieId": 4,
-      "date": "2023-05-20",
-      "times": "14:00"
+      "date": "22-05-2023"
+    }
+  ],
+  "showtimes": [
+    {
+      "id": 1,
+      "dateId": 1,
+      "roomId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 2,
+      "dateId": 1,
+      "roomId": 1,
+      "time": "15:00"
+    },
+    {
+      "id": 3,
+      "dateId": 2,
+      "roomId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 4,
+      "dateId": 2,
+      "roomId": 1,
+      "time": "15:00"
+    },
+    {
+      "id": 5,
+      "dateId": 3,
+      "roomId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 6,
+      "dateId": 3,
+      "roomId": 1,
+      "time": "15:00"
+    },
+    {
+      "id": 7,
+      "dateId": 4,
+      "roomId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 8,
+      "dateId": 4,
+      "roomId": 1,
+      "time": "15:00"
+    },
+    {
+      "id": 9,
+      "dateId": 5,
+      "roomId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 10,
+      "dateId": 5,
+      "roomId": 1,
+      "time": "15:00"
     },
     {
       "id": 11,
-      "movieId": 4,
-      "date": "2023-05-20",
-      "times": "15:00"
+      "dateId": 6,
+      "roomId": 1,
+      "time": "14:00"
     },
     {
       "id": 12,
-      "movieId": 4,
-      "date": "2023-05-21",
-      "times": "14:00"
+      "dateId": 6,
+      "roomId": 1,
+      "time": "15:00"
+    },
+    {
+      "id": 13,
+      "dateId": 7,
+      "roomId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 14,
+      "dateId": 7,
+      "roomId": 1,
+      "time": "15:00"
+    },
+    {
+      "id": 15,
+      "dateId": 8,
+      "roomId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 16,
+      "dateId": 8,
+      "roomId": 1,
+      "time": "15:00"
+    },
+    {
+      "id": 17,
+      "dateId": 9,
+      "roomId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 18,
+      "dateId": 9,
+      "roomId": 1,
+      "time": "15:00"
+    },
+    {
+      "id": 19,
+      "dateId": 10,
+      "roomId": 1,
+      "time": "14:00"
+    },
+    {
+      "id": 20,
+      "dateId": 10,
+      "roomId": 1,
+      "time": "15:00"
     }
   ],
   "movies": [
     {
       "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--3_1688111575146.jpg",
+      "price": 120,
       "movieImage": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--1_1688111521392.jpg",
       "id": 1,
       "movieName": "INSIDIOUS: THE RED DOOR",
@@ -126,10 +485,11 @@
       "director": "Patrick Wilson",
       "duration": 107,
       "category": "Horror, Action, Adventure",
-      "releaseDate": "2023-07-12"
+      "releaseDate": "12-07-2023"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174728im_/https://cdn.galaxycine.vn/media/2023/5/18/2048x682_1684396421946.jpg",
+      "price": 120,
       "movieImage": "https://cdn.galaxycine.vn/media/2023/5/18/300x450_1684396285003.jpg",
       "id": 2,
       "movieName": "Spider-Man: Across the Spider-Verse ",
@@ -137,10 +497,11 @@
       "director": "Joaquim Dos Santos",
       "duration": 105,
       "category": "Anime, Family, Comedy",
-      "releaseDate": "2023-06-01"
+      "releaseDate": "01-06-2023"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
+      "price": 120,
       "movieImage": "https://cdn.galaxycine.vn/media/2023/5/15/doraemon-utopia-2_1684121814838.jpg",
       "id": 3,
       "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
@@ -148,10 +509,11 @@
       "director": "Doyama Takumi",
       "duration": 105,
       "category": "Anime, Family, Comedy",
-      "releaseDate": "2023-05-26"
+      "releaseDate": "26-05-2023"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
+      "price": 120,
       "movieImage": "https://cdn.galaxycine.vn/media/2023/5/19/300x450_1684480233307.jpg",
       "id": 4,
       "movieName": "TRANSFORMERS: RISE OF THE BEAST",
@@ -159,10 +521,11 @@
       "director": "Steven Caple Jr.",
       "duration": 105,
       "category": "Anime, Emotional, Comedy",
-      "releaseDate": "2023-06-09"
+      "releaseDate": "09-06-2023"
     },
     {
       "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/12/2048x682_1686554041241.jpg",
+      "price": 120,
       "movieImage": "https://cdn.galaxycine.vn/media/2023/6/12/300x450_1686553793493.jpg",
       "id": 5,
       "movieName": "ELEMENTAL",
@@ -170,10 +533,11 @@
       "director": "Peter Sohn",
       "duration": 105,
       "category": "Anime, Adventure, Emotional",
-      "releaseDate": "2023-06-23"
+      "releaseDate": "23-06-2023"
     },
     {
       "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
+      "price": 120,
       "movieImage": "https://www.cgv.vn/media/catalog/product/cache/1/thumbnail/190x260/2e2b8cd282892c71872b9e67d2cb5039/p/o/poster-kraken.jpg",
       "id": 6,
       "movieName": "RUBY THỦY QUÁI TUỔI TEEN",
@@ -181,7 +545,7 @@
       "director": "Doyama Takumi",
       "duration": 105,
       "category": "Anime, Family, Adventure",
-      "releaseDate": "2023-09-26"
+      "releaseDate": "26-09-2023"
     }
   ],
   "discounts": [
@@ -193,499 +557,570 @@
   ],
   "theatres": [
     {
-      "theatreId": 1,
+      "id": 1,
       "theatreName": "Cinema 1",
-      "location": "City Center"
+      "location": "Ho Chi Minh"
+    },
+    {
+      "id": 2,
+      "theatreName": "Cinema 2",
+      "location": "Ha Noi"
     }
   ],
-  "halls": [
+  "rooms": [
     {
-      "hallId": 1,
+      "id": 1,
       "theatreId": 1,
-      "hallName": "Hall 1",
-      "capacity": 100
+      "roomName": "Room 1",
+      "capacity": 60
+    },
+    {
+      "id": 2,
+      "theatreId": 1,
+      "roomName": "Room 2",
+      "capacity": 60
     }
   ],
   "seats": [
     {
       "id": 1,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 1,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 2,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 2,
-      "status": "unavailable",
+      "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 3,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 3,
-      "status": "unavailable",
+      "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 4,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 4,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 5,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 5,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 6,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 6,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 7,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 7,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 8,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 8,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 9,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 9,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 10,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "A",
       "seat_number": 10,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 11,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 1,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 12,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 2,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 13,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 3,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 14,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 4,
-      "status": "unavailable",
+      "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 15,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 5,
-      "status": "unavailable",
+      "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 16,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 6,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 17,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 7,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 18,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 8,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 19,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 9,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 20,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "B",
       "seat_number": 10,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 21,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 1,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 22,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 2,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 23,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 3,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 24,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 4,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 25,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 5,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 26,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 6,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 27,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 7,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 28,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 8,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 29,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 9,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 30,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "C",
       "seat_number": 10,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 31,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 1,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 32,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 2,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 33,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 3,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 34,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 4,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 35,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 5,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 36,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 6,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 37,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 7,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 38,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 8,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 39,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 9,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 40,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "D",
       "seat_number": 10,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 41,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 1,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 42,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 2,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 43,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 3,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 44,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 4,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 45,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 5,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 46,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 6,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 47,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 7,
       "status": "available",
+      "booked": "book",
       "class": "VIP"
     },
     {
       "id": 48,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 8,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 49,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 9,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 50,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "E",
       "seat_number": 10,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 51,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 1,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 52,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 2,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 53,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 3,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 54,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 4,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 55,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 5,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 56,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 6,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 57,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 7,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
       "id": 58,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 8,
       "status": "available",
+      "booked": "book",
       "class": "Economy"
     },
     {
-      "id": 59,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 9,
       "status": "available",
-      "class": "Economy"
+      "booked": "book",
+      "class": "Economy",
+      "id": 59
     },
     {
-      "id": 60,
-      "screen_id": 1,
+      "roomId": 1,
       "row_id": "F",
       "seat_number": 10,
       "status": "available",
-      "class": "Economy"
+      "booked": "book",
+      "class": "Economy",
+      "id": 60
     }
   ]
 }
