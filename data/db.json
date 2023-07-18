@@ -574,6 +574,27 @@
       "dateId": 10,
       "roomId": 1,
       "time": "15:00"
+    }
+  ],
+  "movies": [
+    {
+      "id": 7,
+      "name": "MISSION: IMPOSSIBLE DEAD RECKONING PART ONE",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277294/movie/MISSION:%20IMPOSSIBLE%20DEAD%20RECKONING%20PART%20ONE.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277609/banner/MISSION:%20IMPOSSIBLE%20DEAD%20RECKONING%20PART%20ONE.jpg",
+      "actor": "Tom Cruise, Rebecca Ferguson, Vanessa Kirby",
+      "director": "Christopher McQuarrie",
+      "date": "2023-08-07",
+      "duration": "164 ",
+      "category": [
+        "Science Fiction",
+        "Romantic Drama",
+        "Sports",
+        "Courtroom Drama"
+      ],
+      "description": "The 7th part of the Mission Impossible series",
+      "trailer": "https://www.youtube.com/embed/AX7lnd9w_yc",
+      "priceticket": "5,5$"
     },
     {
       "dateId": 1,
@@ -590,76 +611,97 @@
   ],
   "movies": [
     {
-      "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--3_1688111575146.jpg",
-      "price": 120,
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/6/30/insidious--1_1688111521392.jpg",
-      "id": 1,
-      "movieName": "INSIDIOUS: THE RED DOOR",
-      "actor": "Rose Byrne",
-      "director": "Patrick Wilson",
-      "duration": 107,
-      "category": "Horror, Action, Adventure",
-      "releaseDate": "12-07-2023"
-    },
-    {
-      "movieBanner": "https://web.archive.org/web/20230618174728im_/https://cdn.galaxycine.vn/media/2023/5/18/2048x682_1684396421946.jpg",
-      "price": 120,
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/18/300x450_1684396285003.jpg",
-      "id": 2,
-      "movieName": "Spider-Man: Across the Spider-Verse ",
-      "actor": "Spider Man",
-      "director": "Joaquim Dos Santos",
-      "duration": 105,
-      "category": "Anime, Family, Comedy",
-      "releaseDate": "01-06-2023"
-    },
-    {
-      "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
-      "price": 120,
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/15/doraemon-utopia-2_1684121814838.jpg",
-      "id": 3,
-      "movieName": "Doraemon The Movie: Nobita's Sky Utopia",
-      "actor": "Nobita",
-      "director": "Doyama Takumi",
-      "duration": 105,
-      "category": "Anime, Family, Comedy",
-      "releaseDate": "26-05-2023"
-    },
-    {
-      "movieBanner": "https://web.archive.org/web/20230217035251im_/https://cdn.galaxycine.vn/media/2023/2/17/2048x628_1676605422791.jpg",
-      "price": 120,
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/5/19/300x450_1684480233307.jpg",
-      "id": 4,
-      "movieName": "TRANSFORMERS: RISE OF THE BEAST",
-      "actor": "Ron Perlman",
-      "director": "Steven Caple Jr.",
-      "duration": 105,
-      "category": "Anime, Emotional, Comedy",
-      "releaseDate": "09-06-2023"
-    },
-    {
-      "movieBanner": "https://cdn.galaxycine.vn/media/2023/6/12/2048x682_1686554041241.jpg",
-      "price": 120,
-      "movieImage": "https://cdn.galaxycine.vn/media/2023/6/12/300x450_1686553793493.jpg",
-      "id": 5,
-      "movieName": "ELEMENTAL",
+      "id": 10,
+      "name": "ELEMENTAL",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277294/movie/ELEMENTAL.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689279897/banner/ELEMENTAL.jpg",
       "actor": "Mamoudou Athie",
       "director": "Peter Sohn",
-      "duration": 105,
-      "category": "Anime, Adventure, Emotional",
-      "releaseDate": "23-06-2023"
+      "date": "2023-05-07",
+      "duration": "105",
+      "category": [
+        "Animated",
+        "Fantasy",
+        "Romantic Drama"
+      ],
+      "description": "Follows Ember and Wade, in a city where fire-, water-, land- and air-residents live together.",
+      "trailer": "https://www.youtube.com/embed/8qTBWDKtyYU",
+      "priceticket": "4,5$",
+      "views": 0
     },
     {
-      "movieBanner": "https://web.archive.org/web/20230618174839if_/https://cdn.galaxycine.vn/media/2023/5/23/2048wx682h_1684824878382.jpg",
-      "price": 120,
-      "movieImage": "https://www.cgv.vn/media/catalog/product/cache/1/thumbnail/190x260/2e2b8cd282892c71872b9e67d2cb5039/p/o/poster-kraken.jpg",
-      "id": 6,
-      "movieName": "RUBY THỦY QUÁI TUỔI TEEN",
-      "actor": "Nobita",
-      "director": "Doyama Takumi",
-      "duration": 105,
-      "category": "Anime, Family, Adventure",
-      "releaseDate": "26-09-2023"
+      "id": 11,
+      "name": "ANT-MAN AND THE WASP: QUANTUMANIA",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280193/movie/ANT-MAN%20AND%20THE%20WASP:%20QUANTUMANIA.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280898/banner/ANT-MAN%20AND%20THE%20WASP:%20QUANTUMANIA.jpg",
+      "actor": "  Paul Rudd, Michelle Pfeiffer, Evangeline Lilly, Kathryn Newton, Bill Murray, Michael Douglas",
+      "director": "Marvel Studios",
+      "date": "2023-09-07",
+      "duration": "124",
+      "category": [
+        "Fantasy",
+        "Science Fiction",
+        "Epic",
+        "Mystery"
+      ],
+      "description": "Marvel continues to release the third part Ant-Man and the Wasp: Quantumania in the context of the quantum world.",
+      "trailer": "https://www.youtube.com/embed/y-xnXBXtanU",
+      "priceticket": "6$",
+      "views": 0
+    },
+    {
+      "id": 12,
+      "name": "THÁM TỬ LỪNG DANH CONAN: TÀU NGẦM SẮT MÀU ĐEN",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280004/movie/TH%C3%81M%20T%E1%BB%AC%20L%E1%BB%AANG%20DANH%20CONAN:%20T%C3%80U%20NG%E1%BA%A6M%20S%E1%BA%AET%20M%C3%80U%20%C4%90EN.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277610/banner/TH%C3%81M%20T%E1%BB%AC%20L%E1%BB%AANG%20DANH%20CONAN:%20T%C3%80U%20NG%E1%BA%A6M%20S%E1%BA%AET%20M%C3%80U%20%C4%90EN.png",
+      "actor": "Conan",
+      "director": "Yuzuru Tachikawa",
+      "date": "2023-12-07",
+      "duration": "110 ",
+      "category": [
+        "Animated",
+        "Fantasy"
+      ],
+      "description": "Many engineers from around the world gather at the Interpol marine facility \"Pacific Buoy\"",
+      "trailer": "https://www.youtube.com/embed/NwnQI9izPFc",
+      "priceticket": "5$",
+      "views": 0
+    },
+    {
+      "id": 13,
+      "name": "RALLY ROAD RACERS",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689281352/movie/RALLY%20ROAD%20RACERS.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277609/banner/RALLY%20ROAD%20RACERS.jpg",
+      "actor": "Sharon Horgan, Chloe Bennet",
+      "director": "Ross Venokur",
+      "date": "2023-07-07",
+      "duration": "103",
+      "category": [
+        "Animated",
+        "Fantasy"
+      ],
+      "description": "Zhi, a rookie race car driver, gets the opportunity to compete against the reigning champion of the rally car circuit",
+      "trailer": "https://www.youtube.com/embed/aCSuCI2Wn8I",
+      "priceticket": "3$",
+      "views": 0
+    },
+    {
+      "id": 14,
+      "name": "INSIDIOUS: THE RED DOOR",
+      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689281351/movie/INSIDIOUS:%20THE%20RED%20DOOR.jpg",
+      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689277609/banner/INSIDIOUS:%20THE%20RED%20DOOR.jpg",
+      "actor": "Ty Simpkins, Patrick Wilson",
+      "director": " Patrick Wilson",
+      "date": "2023-08-07",
+      "duration": "125",
+      "category": [
+        "Romantic Drama",
+        "Mystery"
+      ],
+      "description": "In Insidious: The Red Door, the horror franchise’s original cast returns for the final chapter of the Lambert family’s terrifying saga",
+      "trailer": "https://www.youtube.com/embed/VJyx2KZ-ILc",
+      "priceticket": "4$"
+    
     }
   ],
   "discounts": [
