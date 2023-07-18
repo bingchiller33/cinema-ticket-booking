@@ -10,7 +10,9 @@ import {
 import "../styles/booking.css";
 import { toast } from "react-toastify";
 
+
 const ManageSeat = () => {
+
   const [seats, setSeats] = useState([]);
   const [rooms, setRooms] = useState([]);
   const [selectedRoomId, setselectedRoomId] = useState(1);

@@ -252,6 +252,66 @@
       "showDateId": 5,
       "showtimesId": 9,
       "id": 28
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 47,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 29
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 46,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 30
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 47,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 31
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 46,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 32
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 47,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 33
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 46,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 34
     }
   ],
   "admins": [

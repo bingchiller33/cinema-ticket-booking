@@ -3,11 +3,13 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { Container } from "react-bootstrap";
 
+
 const DefaultTemplate = ({ children }) => {
+
   return (
     <div>
-      <Header /> 
-      <main>{children}</main> 
+      <Header />
+      <main>{children}</main>
       <Footer />
       <div className="footer_watermark">
         <p style={{ color: "black", textAlign: "center" }}>

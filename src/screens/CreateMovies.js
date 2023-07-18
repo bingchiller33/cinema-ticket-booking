@@ -20,7 +20,7 @@ const CreateMovie = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:8889/movies")
+        fetch("http://localhost:9999/movies")
             .then((resp) => resp.json())
             .then((data) => {
                 setMovie(data);
@@ -52,7 +52,7 @@ const CreateMovie = () => {
         if (name.length === 0 || image.length === 0 || banner.length === 0 || actor.length === 0 || director.length === 0 || date.length === 0 || duration.length === 0 || category.length === 0 || description.length === 0 || trailer.length === 0 || priceticket.length === 0) {
             alert('Please fill all fields');
         } else {
-            fetch("http://localhost:8889/movies", {
+            fetch("http://localhost:9999/movies", {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({ ...empdata, views: 0 }),
