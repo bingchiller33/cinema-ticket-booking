@@ -5,7 +5,7 @@
       "email": "admin@gmail.com",
       "phoneNumber": "0375297014",
       "password": "6fc8c302d25b8d338b123e3dba6321086bbcf793e36a7d828d2a18ee8ad0af23",
-      "role": 1,
+      "role": 3,
       "id": 1
     },
     {
@@ -15,6 +15,30 @@
       "password": "26d9b0e9924f0b3d393dc68bbe59486719d3ef51854545a0bb056ef271ba6fba",
       "role": 1,
       "id": 2
+    },
+    {
+      "username": "Username",
+      "email": "user2@gmail.com",
+      "phoneNumber": "0375297015",
+      "password": "f4e98344541784f2eabcf6fcd1daf050afd9a1bfa2c59819356fe0543752f311",
+      "role": 3,
+      "id": 3
+    },
+    {
+      "username": "User bthg",
+      "email": "user3@gmail.com",
+      "phoneNumber": "0931741451",
+      "password": "f4e98344541784f2eabcf6fcd1daf050afd9a1bfa2c59819356fe0543752f311",
+      "role": 1,
+      "id": 4
+    },
+    {
+      "username": "Cuong DM",
+      "email": "dmcggstore@gmail.com",
+      "phoneNumber": "0981567024",
+      "password": "5a98f0199464b9f094e497e3b8f2d130d73ff41bd24019cbc9a0397b26fd4ebc",
+      "role": 3,
+      "id": 5
     }
   ],
   "bookings": [
@@ -74,6 +98,228 @@
       "showtimesId": 7,
       "price": 120,
       "id": 5
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 26,
+      "showDateId": 2,
+      "showtimesId": 7,
+      "id": 11
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 26,
+      "showDateId": 2,
+      "showtimesId": 7,
+      "id": 12
+    },
+    {
+      "customerId": 2,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 26,
+      "showDateId": 2,
+      "showtimesId": 7,
+      "id": 13
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 14
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 15
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 16
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 17
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 18
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 19
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 20
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 21
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 22
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 5,
+      "showtimesId": 10,
+      "id": 23
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 13,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 24
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 23,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 25
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 33,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 26
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 43,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 27
+    },
+    {
+      "customerId": 3,
+      "movieId": 3,
+      "roomId": 1,
+      "seatId": 32,
+      "showDateId": 5,
+      "showtimesId": 9,
+      "id": 28
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 47,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 29
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 46,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 30
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 47,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 31
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 46,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 32
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 47,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 33
+    },
+    {
+      "customerId": 3,
+      "movieId": 1,
+      "roomId": 1,
+      "seatId": 46,
+      "showDateId": 7,
+      "showtimesId": 14,
+      "price": 125,
+      "id": 34
     }
   ],
   "admins": [
@@ -136,10 +382,10 @@
   ],
   "showtimes": [
     {
-      "id": 1,
-      "dateId": 1,
+      "time": "14:22",
       "roomId": 1,
-      "time": "14:00"
+      "dateId": 1,
+      "id": 1
     },
     {
       "id": 2,
@@ -271,42 +517,19 @@
       "priceticket": "5,5$"
     },
     {
-      "id": 8,
-      "name": "Spider-Man: Across the Spider-Verse ",
-      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280003/movie/Spider-Man:%20Across%20the%20Spider-Verse.jpg",
-      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689279897/banner/Spider-Man:%20Across%20the%20Spider-Verse.jpg",
-      "actor": "Spider Man",
-      "director": "Joaquim Dos Santos",
-      "date": "2023-08-07",
-      "duration": "170",
-      "category": [
-        "Animated",
-        "Fantasy",
-        "Science Fiction"
-      ],
-      "description": "Miles Morales returns for the next chapter of the Oscar®",
-      "trailer": "https://www.youtube.com/embed/SUz8Aw28vrc",
-      "priceticket": "5$",
-      "views": 0
+      "dateId": 1,
+      "time": "16:00",
+      "roomId": 1,
+      "id": 22
     },
     {
-      "id": 9,
-      "name": "Doraemon The Movie: Nobita's Sky Utopia",
-      "image": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689280003/movie/Doraemon%20The%20Movie:%20Nobita%27s%20Sky%20Utopia.jpg",
-      "banner": "https://res.cloudinary.com/dakpa1ph2/image/upload/v1689279897/banner/Doraemon%20The%20Movie:%20Nobita%27s%20Sky%20Utopia.jpg",
-      "actor": "Nobita",
-      "director": "Doyama Takumi",
-      "date": "2023-10-07",
-      "duration": "150",
-      "category": [
-        "Fantasy",
-        "Animated"
-      ],
-      "description": "Doraemon The Movie: Nobita’s Sky Utopia 2023 is about when Nobita finds a crescent-shaped island in the sky",
-      "trailer": "https://www.youtube.com/embed/SthaOnp5uDs",
-      "priceticket": "5$",
-      "views": 0
-    },
+      "dateId": 1,
+      "time": "14:22",
+      "roomId": 2,
+      "id": 23
+    }
+  ],
+  "movies": [
     {
       "id": 10,
       "name": "ELEMENTAL",
@@ -425,13 +648,13 @@
       "id": 1,
       "theatreId": 1,
       "roomName": "Room 1",
-      "capacity": 100
+      "capacity": 60
     },
     {
       "id": 2,
       "theatreId": 1,
       "roomName": "Room 2",
-      "capacity": 100
+      "capacity": 60
     }
   ],
   "seats": [
@@ -958,22 +1181,22 @@
       "class": "Economy"
     },
     {
-      "id": 59,
       "roomId": 1,
       "row_id": "F",
       "seat_number": 9,
       "status": "available",
       "booked": "book",
-      "class": "Economy"
+      "class": "Economy",
+      "id": 59
     },
     {
-      "id": 60,
       "roomId": 1,
       "row_id": "F",
       "seat_number": 10,
       "status": "available",
       "booked": "book",
-      "class": "Economy"
+      "class": "Economy",
+      "id": 60
     }
   ]
 }

@@ -3,3 +3,14 @@
     height: 450px;
     background-size: cover;
   }
+.main {
+  padding: 50px 0 280px 0;
+}
+
+.movie-select-top {
+  margin-bottom: 30px !important;
+}
+
+.ordered-main {
+  margin: 50px 0 300px 0;
+}

@@ -6,13 +6,8 @@ import { Facebook, Instagram, Youtube } from "react-bootstrap-icons";
 
 const Footer = () => {
   return (
-<<<<<<< HEAD
-    <footer className="footer  ">
-      <div className="container">
-        <p>&copy; {new Date().getFullYear()} Cinema Ticket Booking App</p>
-=======
     <footer className="footer">
-      <Container>
+       <Container className="footer_container">
         <Row>
           <Col lg={3} xs={6}>
             <ul>
@@ -99,12 +94,6 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-      <div className="footer_watermark">
-        <p style={{ color: "black", textAlign: "center" }}>
-          &copy; {new Date().getFullYear()} Cinema Ticket Booking App
-        </p>
->>>>>>> 10326a13800c80d1d1e04ac1b6d559783008c94d
-      </div>
     </footer>
   );
 };

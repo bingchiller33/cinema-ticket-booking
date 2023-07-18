@@ -51,10 +51,10 @@ const Header = () => {
               Movies
             </NavLink>
             <NavLink
-              to="/booking"
+              to="/showtimes"
               className={({ isActive }) => (isActive ? "active-link" : "link")}
             >
-              Poster
+              Showtimes
             </NavLink>
           </Nav>
         </Navbar.Collapse>

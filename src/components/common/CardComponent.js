@@ -92,13 +92,12 @@ const CardComponent = ({ apiUrl, heading }) => {
       <h1 style={{ margin: "30px 0px 30px" }}>{heading}</h1>
       <Slider {...settings}>
         {movies.map((item) => (
-          <div key={item.movieId} className="card-card">
-            <div className="card-top">
-              <img src={item.movieImage} alt={item.movieName} />
-              <Link to="/movies">
-                <h1>{item.movieName}</h1>
-              </Link>
-            </div>
+          <div key={item.id} className="card-card">
+            <Link  to={"/detail/" + item.id}>
+              <div className="card-top">
+                <img src={item.movieImage} alt={item.movieName} />
+              </div>
+            </Link>
           </div>
         ))}
       </Slider>

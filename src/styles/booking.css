@@ -49,3 +49,11 @@
 .btn_payment {
     padding: 6px 30px !important;
 }
+
+.seat_options {
+    text-align: -webkit-center;
+}
+
+.seat_info {
+    text-align: center;
+}

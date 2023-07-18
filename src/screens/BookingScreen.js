@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row, Table } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import DefaultTemplate from "../templates/DefaultTemplate";
-import '../styles/booking.css'
+import "../styles/booking.css";
 import { FileEarmark, FileEarmarkExcelFill } from "react-bootstrap-icons";
 import { toast } from "react-toastify";
 import { FileEarmarkFill } from "react-bootstrap-icons/dist";
