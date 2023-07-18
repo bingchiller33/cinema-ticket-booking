@@ -31,6 +31,14 @@
       "password": "f4e98344541784f2eabcf6fcd1daf050afd9a1bfa2c59819356fe0543752f311",
       "role": 1,
       "id": 4
+    },
+    {
+      "username": "Cuong DM",
+      "email": "dmcggstore@gmail.com",
+      "phoneNumber": "0981567024",
+      "password": "5a98f0199464b9f094e497e3b8f2d130d73ff41bd24019cbc9a0397b26fd4ebc",
+      "role": 3,
+      "id": 5
     }
   ],
   "bookings": [

@@ -178,11 +178,28 @@ const ViewTiket = () => {
                                         </Table>
                                     </Col>
                                 </Row>
+                                <Form> 
+                                    <Form.Group controlId="cardNumber">
+                                        <Form.Label>Card Number:</Form.Label>
+                                        <Form.Control type="text" placeholder="Enter card number" />
+                                    </Form.Group>
+                                    <Form.Group controlId="cardDetails">
+                                        <Form.Label>Card Expired:</Form.Label>
+                                        <Row>
+                                        <Col xs={9}>
+                                            <Form.Control type="text" placeholder="MM/YY" />
+                                        </Col>
+                                        <Col xs={3}>
+                                            <Form.Control type="text" placeholder="CVV" />
+                                        </Col>
+                                        </Row>
+                                    </Form.Group>
                                 <Row className="pt-3 pb-3 text-center">
                                     <Col xs={12}>
                                         <Button className="btn_payment btn-danger text-light" onClick={() => handleClickPaying()}>Pay</Button>
                                     </Col>
                                 </Row>
+                                </Form>
                             </Row>
                         </Container>
                     </Col>

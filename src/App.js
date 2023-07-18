@@ -11,6 +11,7 @@ import ManageShowtimes from "./screens/ManageShowtimes";
 import ManageSeat from "./screens/ManageSeat";
 import ViewTiket from "./screens/ViewTicket";
 import CreateMovies from "./screens/CreateMovies";
+import Ordered from "./screens/Ordered";
 
 function App() {
   const loginTime = localStorage.getItem("loginTime");
@@ -56,6 +57,7 @@ function App() {
         </Route>
         <Route path="/detail/:mid" element={<DetailScreen />} />
         <Route path="/viewticket/:mid" element={<ViewTiket />} />
+        <Route path="/ordered" element={<Ordered />} />
       </Routes>
     </BrowserRouter>
   );
