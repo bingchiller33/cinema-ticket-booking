@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Col, Row, Table, Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import DefaultTemplate from "../templates/DefaultTemplate";
 
 const ListMovie = () => {
     const [movie, setMovie] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8889/movies")
+        fetch("http://localhost:9999/movies")
             .then((resp) => resp.json())
             .then((data) => {
                 setMovie(data);
@@ -15,7 +16,7 @@ const ListMovie = () => {
 
     const handleDelete = (id) => {
         if (window.confirm("Do you want this film ?")) {
-            fetch("http://localhost:8889/movies/" + id, {
+            fetch("http://localhost:9999/movies/" + id, {
                 method: "DELETE",
             })
                 .then(() => {
@@ -30,7 +31,8 @@ const ListMovie = () => {
 
 
     return (
-        <Row>
+        <DefaultTemplate>
+ <Row>
             <Col md={11} style={{ margin: '0 auto' }}>
                 <Row>
                     <Col style={{ textAlign: 'right' }}>
@@ -88,6 +90,8 @@ const ListMovie = () => {
 
             </Col>
         </Row>
+        </DefaultTemplate>
+       
     );
 }
 

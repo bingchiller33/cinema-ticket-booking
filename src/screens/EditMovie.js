@@ -18,7 +18,7 @@ const EditMovie = () => {
     const [priceticket, setPriceticket] = useState(0);
 
     useEffect(() => {
-        fetch(" http://localhost:8889/movies/" + mid)
+        fetch(" http://localhost:9999/movies/" + mid)
             .then((res) => {
                 return res.json();
             })
@@ -52,7 +52,7 @@ const EditMovie = () => {
             alert('Please fill all fields');
         }
         else {
-            fetch(" http://localhost:8889/movies/" + mid, {
+            fetch(" http://localhost:9999/movies/" + mid, {
                 method: "PUT",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(empdata),

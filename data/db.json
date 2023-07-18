@@ -4,7 +4,7 @@
       "username": "admin",
       "email": "admin@gmail.com",
       "phoneNumber": "0375297014",
-      "password": "6fc8c302d25b8d338b123e3dba6321086bbcf793e36a7d828d2a18ee8ad0af23",
+      "password": "26d9b0e9924f0b3d393dc68bbe59486719d3ef51854545a0bb056ef271ba6fba",
       "role": 3,
       "id": 1
     },
@@ -320,6 +320,86 @@
       "showtimesId": 14,
       "price": 125,
       "id": 34
+    },
+    {
+      "customerId": 1,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 39,
+      "showDateId": 8,
+      "showtimesId": 16,
+      "price": 120,
+      "id": 35
+    },
+    {
+      "customerId": 1,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 38,
+      "showDateId": 8,
+      "showtimesId": 16,
+      "price": 120,
+      "id": 36
+    },
+    {
+      "customerId": 1,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 36,
+      "showDateId": 8,
+      "showtimesId": 16,
+      "price": 125,
+      "id": 37
+    },
+    {
+      "customerId": 1,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 35,
+      "showDateId": 8,
+      "showtimesId": 16,
+      "price": 125,
+      "id": 38
+    },
+    {
+      "customerId": 1,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 39,
+      "showDateId": 8,
+      "showtimesId": 16,
+      "price": 120,
+      "id": 39
+    },
+    {
+      "customerId": 1,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 38,
+      "showDateId": 8,
+      "showtimesId": 16,
+      "price": 120,
+      "id": 40
+    },
+    {
+      "customerId": 1,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 36,
+      "showDateId": 8,
+      "showtimesId": 16,
+      "price": 125,
+      "id": 41
+    },
+    {
+      "customerId": 1,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 35,
+      "showDateId": 8,
+      "showtimesId": 16,
+      "price": 125,
+      "id": 42
     }
   ],
   "admins": [
@@ -1155,6 +1235,33 @@
       "booked": "book",
       "class": "Economy",
       "id": 60
+    },
+    {
+      "roomId": "2",
+      "row_id": "A",
+      "seat_number": 1,
+      "status": "available",
+      "booked": "book",
+      "class": "Economy",
+      "id": 61
+    },
+    {
+      "roomId": "2",
+      "row_id": "A",
+      "seat_number": 2,
+      "status": "available",
+      "booked": "book",
+      "class": "Economy",
+      "id": 62
+    },
+    {
+      "roomId": "2",
+      "row_id": "A",
+      "seat_number": 3,
+      "status": "available",
+      "booked": "book",
+      "class": "Economy",
+      "id": 63
     }
   ]
 }

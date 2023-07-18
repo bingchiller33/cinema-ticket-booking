@@ -50,12 +50,6 @@ const Header = () => {
             >
               Movies
             </NavLink>
-            <NavLink
-              to="/booking"
-              className={({ isActive }) => (isActive ? "active-link" : "link")}
-            >
-              Poster
-            </NavLink>
           </Nav>
         </Navbar.Collapse>
 
@@ -80,6 +74,16 @@ const Header = () => {
                       style={{ textDecoration: "none", color: "#333" }}
                     >
                       Manage Seats
+                    </Link>
+                  </NavDropdown.Item>
+                )}
+                {user.role === 3 && (
+                  <NavDropdown.Item>
+                    <Link
+                      to={"/list"}
+                      style={{ textDecoration: "none", color: "#333" }}
+                    >
+                      List Movies
                     </Link>
                   </NavDropdown.Item>
                 )}
