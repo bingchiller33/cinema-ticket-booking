@@ -31,6 +31,14 @@
       "password": "f4e98344541784f2eabcf6fcd1daf050afd9a1bfa2c59819356fe0543752f311",
       "role": 1,
       "id": 4
+    },
+    {
+      "username": "Cuong DM",
+      "email": "dmcggstore@gmail.com",
+      "phoneNumber": "0981567024",
+      "password": "5a98f0199464b9f094e497e3b8f2d130d73ff41bd24019cbc9a0397b26fd4ebc",
+      "role": 3,
+      "id": 5
     }
   ],
   "bookings": [
@@ -252,6 +260,46 @@
       "showDateId": 5,
       "showtimesId": 9,
       "id": 28
+    },
+    {
+      "customerId": 5,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 15,
+      "showDateId": 2,
+      "showtimesId": 3,
+      "price": 125,
+      "id": 29
+    },
+    {
+      "customerId": 5,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 2,
+      "showtimesId": 3,
+      "price": 125,
+      "id": 30
+    },
+    {
+      "customerId": 5,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 15,
+      "showDateId": 2,
+      "showtimesId": 3,
+      "price": 125,
+      "id": 31
+    },
+    {
+      "customerId": 5,
+      "movieId": 2,
+      "roomId": 1,
+      "seatId": 16,
+      "showDateId": 2,
+      "showtimesId": 3,
+      "price": 125,
+      "id": 32
     }
   ],
   "admins": [
